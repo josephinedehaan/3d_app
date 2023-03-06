@@ -98,14 +98,20 @@ h1, h2, h3, h4, h5, h6 {
       border-width: 0px;
       margin-top: 0px;
       padding-top: 0px;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 0px;
+      padding-right: 0px;
       margin-bottom: 10px;
       background-color: rgb(255, 255, 255);
       font-size: 13px;
       text-align: center;
-  }
+  } 
 
+
+
+#home_card_img {
+      padding-left: 40px;
+      padding-right: 40px;
+}
 
 
 #gallery {
@@ -115,17 +121,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #viewer_3d {
-      margin-top: 90px;
-      background-color: #d9d9d9;
+      margin-top: 0px;
+      /* background-color: #d9d9d9; */
 
 }
 
 #modelStyle{
       border: solid;
-      border-color: #07070781;
-      width: 500px;
-      height: 400px;
+      border-color: #00000081;
+      border-width: 1px;
 }
+
 
 .logo {
       margin-top: 3px;
@@ -258,7 +264,7 @@ h1, h2, h3, h4, h5, h6 {
 .copyright {
       padding-top: 8px;
 }
-  .social {
+.social {
       padding-top: 0px;
 }
 
