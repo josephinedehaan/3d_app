@@ -1,0 +1,305 @@
+
+@font-face {
+    font-family: cocaColaFont;
+    src: url(../assets/fonts/loki_cola/LOKICOLA.TTF)
+}
+@font-face {
+      font-family: Oswald;
+      src: url(../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf)
+}
+@font-face {
+      font-family: openSans;
+      src: url(../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf)
+}
+
+body {
+      background-color: white;
+}
+
+.main_contents {
+      margin-top: 70px;
+      margin-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+}
+
+#main_3d_image {
+      margin-top: 0;
+      width: 100%;
+      display: inline-block;
+      background-image: url(../assets/images/main_3d_576.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+#main_text {
+      margin: 5%;
+      width: 90%;
+      display: block;
+      background-color: rgba(255, 255, 255, 0.534);
+      padding: 10px;
+      padding-top: 20px;
+}
+
+#main_text h2 {
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      margin-top: 0px;
+      margin-bottom: 5px;
+}
+
+#main_text h3{
+      font-size: 15px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+}
+
+#main_text p{
+      font-size: 12px;
+      margin: 0px;
+      line-height: 1.2;
+      color: rgb(0, 0, 0);
+}
+
+p {
+      font-family: 'Open Sans', sans-serif;
+      color: gray;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+      font-family: 'Oswald', sans-serif;
+}
+
+.col-sm-4 {
+      padding-left: 0px;
+      padding-right: 0px;
+}
+.card {
+      border: 0px;
+      /* border-radius: .25rem;*/
+      margin-top: 0px;
+      padding-top: 0px;
+      margin-bottom: 10px;
+      background-color: rgb(255, 255, 255);
+      font-size: 13px;
+  }
+
+.logo {
+      margin-top: 3px;
+}
+
+.logo h1{
+      font-family: cocaColaFont;
+      font-size: 31px;
+      margin: 0;
+      margin-top: -10px;
+      margin-bottom: -15px;
+      float: left;
+      padding-top: 0px;
+      padding-left: 0px;
+      padding-right: 3px;
+
+}
+
+.logo h2{
+      font-family: cocaColaFont;
+      font-size: 31px;
+      margin-top: -6px;
+      margin-bottom: -15px;
+      padding-top: 0px;
+      padding-left: 0px;
+      padding-right: 3px;
+      float: left;
+}
+
+.logo h3 {
+      font-size: 22px;
+      margin-top: -4px;
+      margin-bottom: -5;
+      padding-top: 0px;
+      padding-left: 0px;
+      /* float: left; */
+}
+
+.logo p {
+      font-size: 9px;
+      margin-top: -5px;
+      margin-bottom: -30px;
+      margin-left: -0px;
+      padding-top: 0px;
+      padding-left: -3px;
+      color: white;
+}
+/* .img-thumbnail {...
+
+} */ 
+
+.navbar_coca_cola {
+      background-color: #000000;
+      min-height: 70px;
+}
+
+/* THIS CHUNK OF CODE IS MESSY AND NEEDS TIDYING!! */
+.navbar_coca_cola .navbar-brand {
+      color: rgb(245, 235, 235);
+}
+
+.navbar_coca_cola .navbar-brand:hover {
+      color: rgb(255, 0, 0);
+}
+
+.navbar_coca_cola .navbar-nav > li > a {
+      color: white;
+}
+.navbar_coca_cola .navbar-nav > li > a:hover,
+.navbar_coca_cola .navbar-nav > li > a:focus {
+      color: rgb(255, 0, 0);
+}
+
+.navbar_coca_cola .navbar-nav .nav-item {
+      margin-top: 0px;
+}
+
+.navbar_coca_cola .navbar-nav .nav-item > .active,
+.navbar_coca_cola .navbar-nav > .active > a:hover,
+.navbar_coca_cola .navbar-nav > .active > a:focus {
+    color:  #ffffff; /* Font color for active font */
+    background-color: #616161;
+}
+
+.navbar_coca_cola .navbar-toggler {
+      border-color: white;
+}
+
+/* FIX THIS: what is this  MESS LOL?*/
+.navbar_coca_cola  .navbar-toggler-icon {
+      color: white;
+      /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg
+  viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath
+  stroke='rgba(255, 255, 255, 1.0)' stroke-width='2' stroke-linecap='round'
+  stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); */
+}
+
+
+.dropdown-menu {
+      text-align: -webkit-left;
+      background-color: #000000;
+      margin-top: 13px;
+}
+
+.dropdown-menu .dropdown-item {
+      color: #ffffff;
+}
+
+.dropdown-menu .dropdown-item:hover {
+      color: #ff0000;
+      background-color: #000000;
+}
+
+/* FIX THIS: related to above commented out block of code */
+.navbar_coca_cola .navbar-toggler {
+      outline: none !important;
+}
+
+.footer {
+      /* color: #030303; */
+      background-color: #000000;
+      height: 50px;
+      /* position: fixed; */
+      bottom: 0;
+      width: 100%;
+}
+.navbar-text > a {
+      font-size: 10px;
+}
+.navbar-text > p {
+      color: rgb(238, 244, 238);
+      font-size: 14px;
+      text-decoration: none;
+}
+.copyright {
+      padding-top: 8px;
+}
+  .social {
+      padding-top: 0px;
+}
+
+
+/* X-Small devices (portrait phones, less than 576px)
+      No media query for `xs` since this is the default in Bootstrap */
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+      #main_text {
+            float: left;
+            margin: 0%;
+            margin-top: 5%;
+            margin-left: 2%;
+        }
+      #main_3d_image {
+            margin-top: 7%;
+            background-image: url(../assets/images/main_3d_768.png);
+      }
+      .main_contents {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+      }
+      .col-sm-4 {
+            max-width: 33.333333%;
+      }
+ }
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+      #main_3d_image {
+            background-image: url(../assets/images/main_3d_992.png);
+            height: 350px;
+            margin-top: 8%;
+      }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+      #main_3d_image {
+            background-image: url(../assets/images/main_3d_1200.png);
+            height: 450px;
+            margin-top: 6%;
+      }
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+      #main_3d_image {
+            background-image: url(../assets/images/main_3d_1400.png);
+            height: 600px;
+            margin-top: 4%;
+
+      }
+ }
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+      #main_3d_image {
+            background-image: url(../assets/images/main_3d.png);
+            height: 700px;
+            margin-top: 3%;
+      } 
+      #main_text h2 {
+            color: rgb(0, 0, 0);
+            font-size: 35px;
+            margin-top: 0px;
+            margin-bottom: 5px;
+      }
+      
+      #main_text h3{
+            font-size: 25px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+      }
+      
+      #main_text p{
+            font-size: 16px;
+            margin: 0px;
+            line-height: 1.2;
+            color: rgb(0, 0, 0);
+      }
+}
+
