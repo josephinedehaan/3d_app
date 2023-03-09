@@ -114,11 +114,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#gallery {
-      margin-top:90px;
-      background-color: #d9d9d9;
+.gallery {
+      margin-top: 0;
+      border: 3px solid black;
+      padding: 10px;
+      max-width: 100%;
+      color: white;
+      }
 
-}
+
 
 #viewer_3d {
       margin-top: 0px;
