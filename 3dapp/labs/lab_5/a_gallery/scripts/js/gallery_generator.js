@@ -24,11 +24,11 @@ $(document).ready(function() {
             // Look round the response array of tokens, which are the image names ...
             for (var i=0; i<response.length; i++) {
                 // and continue to builde the html code for the gallery
-                htmlCode += '<td id="gallery_cell">';
+                htmlCode += '<div id="gallery_cell">';
                 htmlCode += '<a href="' + 'labs/a_gallery/' + response[i] +'">';
                 htmlCode += '<img src="labs/a_gallery/' + response[i] + '" class="image_thumbnail"/>';
                 htmlCode += '</a>';
-                htmlCode += '</td>';
+                htmlCode += '</div>';
                 // Control the column layout for the gallery thumbnails
                 if(((i+1)%numberOfColumns) == 0) {
                     htmlCode += '</tr><tr>';
