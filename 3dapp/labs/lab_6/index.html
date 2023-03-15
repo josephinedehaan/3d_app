@@ -77,16 +77,16 @@
                 <div class="carousel-item active">
                     <div class="main_3d_image" id="img_one">
                         <div id="main_text" class="col-xs-12 col-sm-4">
-                            <h2>COCA COLA GREAT BRITAIN</h2>
-                            <h3>The world's leading manufacturer, marketer and distributor of non-alcoholic beverages.</h3>
+                            <div id="title_home"></div>
+                            <div id="subtitle_home"></div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="main_3d_image" id="img_two">
                         <div id="main_text" class="col-xs-12 col-sm-4">
-                            <h2>COCA COLA TESTTTTTT</h2>
-                            <h3>The world's leading manufacturer, marketer and distributor of non-alcoholic beverages.</h3>
+                            <div id="title_home"></div>
+                            <div id="subtitle_home"></div>
                         </div>
                     </div>
                 </div>
@@ -110,11 +110,8 @@
                         <img src="assets/images/coke_square_576.png" class="img-fluid" alt="Image of a Coca Cola bottle">
                     </a>
                     <div class="card-body">
-                        <h3 class="card-title">Coca-Cola</h3>
-                        <p class="card-text">It was 1886, John Pemberton, an Atlanta pharmacist, was inspired by simple 
-                            curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, 
-                            the mixture was combined with carbonated water and sampled by customers who all agreed - 
-                            this new drink was something special!</p>
+                        <div class="card-title" id="title_cokecard"></div>
+                        <div class="card-text" id="description_cokecard"></div>
                         <a href="javascript: swap('coke')" class="btn btn-sm btn-outline-primary">Find out more...</a>
                     </div>
                 </div>
@@ -127,16 +124,12 @@
                         <img src="assets/images/sprite_square_576.png" class="img-fluid" alt="Image of a sprite bottle">
                     </a>
                     <div class="card-body">
-                        <h3 class="card-title">Sprite</h3>
-                        <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's 
-                            leading lemon and lime flavoured soft drink and is sold in more than 190 different countries. Sprite Zero, 
-                            part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or calories.
-                        </p>
+                        <div class="card-title" id="title_spritecard"></div>
+                        <div class="card-text" id="description_spritecard"></div>
                         <a href="javascript: swap('sprite')" class="btn btn-sm btn-outline-primary">Find out more...</a>
                     </div>
                 </div>
             </div>
-
 
             <!--DR PEPPER-->
             <div class="col-sm-4">
@@ -145,11 +138,8 @@
                         <img src="assets/images/pepper_square_576.png" class="img-fluid" alt="Image of a sprite bottle">
                     </a>
                     <div class="card-body">
-                        <h3 class="card-title">Dr Pepper</h3>
-                        <p class="card-text">Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's 
-                            still the same, with that distinctive flavour you just can't quite put your tongue on. It was created by Texas pharmacist 
-                            Charles Alderton in 1885.
-                        </p>
+                        <div class="card-title" id="title_peppercard"></div>
+                        <div class="card-text" id="description_peppercard"></div>
                         <a href="javascript: swap('pepper')" class="btn btn-sm btn-outline-primary">Find out more...</a>
                     </div>
                 </div>
@@ -187,42 +177,75 @@
                                 </scene>
                             </x3d>
                         </div>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Front</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Back</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Left</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Right</a>
-                        <h4 class="card-title">Coca Cola X3D Model</h4>
-                        <p class="card-text">This X3D model of the coke can has been created in C4d
-                            exported to VRML97 and converted to X3D for display online.
-                        </p>
+                        <div class="card-text" id="title_3d_coke"></div>
+                        <div class="card-text" id="subtitle_3d_coke"></div>
                     </div>
                 </div>
             </div>
             <!--Col 2: IMAGE GALLERY-->
             <div class="col-sm-2">
                 <div class="card text-left">
-                    <div class="card-header">Gallery</div>
                     <div class="card-body">
-                        <h4 class="card-title">3D Image gallery</h4>
+                        <div class="card-title" id="gallery_title_coke"></div>
                         <div id="gallery_coke"></div>
-                        <p class="card-text">3D Images rendered in C4D</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ROW 2-->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Cameras</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Camera views</h4>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Front</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Back</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Left</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Right</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Animation</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Animation options</h4>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotX</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotY</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotZ</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Stop</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Render</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Render and lighting options</h4>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Poly</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Wire</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Headlight</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Default</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!--ROW 2-->
+        <!--ROW 3-->
         <div class="row">
             <!--Info about 3D model-->
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title">Coca Cola</h3>
-                        <p class="card-text">Arlanta Beginnings: It was 1886, and in New York Harbour, workers were 
-                            constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was About
-                            to be unveiled. Like many people who change history, John Pemberon, and Atlanda pharmacist, was inspired
-                            by simple curiostity
-                        </p>
+                        <div class="card-title" id="title_coke"></div>
+                        <div class="card-text" id="description_coke"></div>
                         <a href="#" class="btn btn-primary">Find out more...</a>
                     </div>
                 </div>
@@ -266,9 +289,8 @@
                         <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Back</a>
                         <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Left</a>
                         <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Right</a>
-                        <h4 class="card-title">Sprite X3D Model</h4>
-                        <p class="card-text">This X3D model of the Sprite bottle has been created in C4d
-                            exported to VRML97 and converted to X3D for display online.
+                        <div class="card-text" id="title_3d_sprite"></div>
+                        <div class="card-text" id="subtitle_3d_sprite"></div>
                         </p>
                     </div>
                 </div>
@@ -276,11 +298,8 @@
             <!--IMAGE GALLERY-->
                 <div class="col-sm-2">
                     <div class="card text-left">
-                        <div class="card-header">
-                            Explore other Coca-Cola brands
-                        </div>
+                        <div class="card-title" id="gallery_title_sprite"></div>
                         <div id="gallery_sprite"></div>
-                        <p class="card-text">3D Images rendered in C4D</p>
                     </div>
                 </div>
             </div>
@@ -292,12 +311,8 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title">Coca Cola</h3>
-                        <p class="card-text">Arlanta Beginnings: It was 1886, and in New York Harbour, workers were 
-                            constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was About
-                            to be unveiled. Like many people who change history, John Pemberon, and Atlanda pharmacist, was inspired
-                            by simple curiostity
-                        </p>
+                        <div class="card-title" id="title_sprite"></div>
+                        <div class="card-text" id="description_sprite"></div>
                         <a href="#" class="btn btn-primary">Find out more...</a>
                     </div>
                 </div>
@@ -340,21 +355,16 @@
                         <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Back</a>
                         <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Left</a>
                         <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Right</a>
-                        <h4 class="card-title">Dr Pepper X3D Model</h4>
-                        <p class="card-text">This X3D model of the Dr Pepper Cup has been created in C4d
-                            exported to VRML97 and converted to X3D for display online.
-                        </p>
+                        <h4 class="card-title" id="title_3d_pepper"></h4>
+                        <p class="card-text" id="subtitle_3d_pepper"></p>
                     </div>
                 </div>
             </div>
             <!--IMAGE GALLERY-->
                 <div class="col-sm-2">
                     <div class="card text-left">
-                        <div class="card-header">
-                            Explore other Coca-Cola brands
-                        </div>
+                        <div class="card-header" id="gallery_title_pepper"></div>
                         <div class = "gallery" id="gallery_pepper"></div>
-                        <p class="card-text">3D Images rendered in C4D</p>
                     </div>
                 </div>
             </div>
@@ -365,12 +375,8 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title">Coca Cola</h3>
-                        <p class="card-text">Arlanta Beginnings: It was 1886, and in New York Harbour, workers were 
-                            constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was About
-                            to be unveiled. Like many people who change history, John Pemberon, and Atlanda pharmacist, was inspired
-                            by simple curiostity
-                        </p>
+                        <div class="card-title" id="title_pepper">Coca Cola</div>
+                        <div class="card-text" id="description_pepper"></div>
                         <a href="#" class="btn btn-primary">Find out more...</a>
                     </div>
                 </div>
@@ -406,8 +412,8 @@
 
     <!-- <script src="assets/font_awesome/js/all.js"></script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    <script   src="https://code.jquery.com/jquery-3.6.4.min.js"   
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="   
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -416,6 +422,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="scripts/js/custom.js"></script>
+    <script src="scripts/js/getJsonData.js"></script>
 
 </body>
 
