@@ -16,7 +16,6 @@
     <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
     <link rel="stylesheet" href="css/custom.css" src="https://www.x3dom.org/download/x3dom.css">
     <title>Coca Cola Journey</title>
-    <script src="scripts/js/swap_restyle.js"></script>
 
 
 
@@ -30,7 +29,7 @@
 
             <!--Brand-->
             <div class="logo">
-                <a class="navbar-brand" href="javascript: swap('home')">
+                <a class="navbar-brand" id="navHome" href="#">
                     <h1>1</h1>
                     <h1>oca</h1>
                     <h2>Cola</h2>
@@ -56,9 +55,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle dropdown-menu-end" href="#" id="navbardrop" data-toggle="dropdown">Drinks</a>
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="javascript: swap('coke')">Coca Cola</a>
-                            <a class="dropdown-item" href="javascript: swap('sprite')">Sprite</a>
-                            <a class="dropdown-item" href="javascript: swap('pepper')">Dr Pepper</a>
+                            <a class="dropdown-item" id="navCoke" href="#">Coca Cola</a>
+                            <a class="dropdown-item" id="navSprite" href="#">Sprite</a>
+                            <a class="dropdown-item" id="navPepper" href="#">Dr Pepper</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -149,7 +148,7 @@
     </div>
 
 <!--COKE MAIN CONTENTS-->
-    <div id='coke' class="container-fluid main_contents" style="display:none;">
+    <div id="cokeModel" class="container-fluid main_contents" style="display:none;">
         <!--ROW 1--> 
         <div class="row">
             <!--Col 1: 3D VIEWER-->
@@ -173,7 +172,9 @@
                         <div id="modelStyle">
                             <x3d id="x3d_viewer" width="300px" height="400px">
                                 <scene>
-                                    <inline url="assets/3d_models/coke_can.x3d"></inline>
+                                    <transform>
+                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/3d_models/coke_can.x3d"></inline>
+                                    </transform>
                                 </scene>
                             </x3d>
                         </div>
@@ -192,71 +193,10 @@
                 </div>
             </div>
         </div>
-        <!--ROW 2-->
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Cameras</h3>
-                    </div>
-                    <div class="card-body">
-                        <h4>Camera views</h4>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Front</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Back</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Left</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Right</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Animation</h3>
-                    </div>
-                    <div class="card-body">
-                        <h4>Animation options</h4>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotX</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotY</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotZ</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Stop</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Render</h3>
-                    </div>
-                    <div class="card-body">
-                        <h4>Render and lighting options</h4>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Poly</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Wire</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Headlight</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Default</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--ROW 3-->
-        <div class="row">
-            <!--Info about 3D model-->
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title" id="title_coke"></div>
-                        <div class="card-text" id="description_coke"></div>
-                        <a href="#" class="btn btn-primary">Find out more...</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </div>
 
 <!--SPRITE MAIN CONTENTS-->    
-    <div id="sprite" class="container-fluid main_contents" style="display:none;">
+    <div id="spriteModel" class="container-fluid main_contents" style="display:none;">
 
         <!--ROW 1--> 
         <div class="row">
@@ -285,10 +225,6 @@
                                 </scene>
                             </x3d>
                         </div>
-                        <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Front</a>
-                        <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Back</a>
-                        <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Left</a>
-                        <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Right</a>
                         <div class="card-text" id="title_3d_sprite"></div>
                         <div class="card-text" id="subtitle_3d_sprite"></div>
                         </p>
@@ -305,25 +241,12 @@
             </div>
 
 
-        <!--ROW 2-->
-        <div class="row">
-            <!--Info about 3D model-->
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title" id="title_sprite"></div>
-                        <div class="card-text" id="description_sprite"></div>
-                        <a href="#" class="btn btn-primary">Find out more...</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
     </div>
 
 <!--DR PEPPER MAIN CONTENTS-->
-    <div id="pepper" class="container-fluid main_contents" style="display:none;">
+    <div id="pepperModel" class="container-fluid main_contents" style="display:none;">
         <!--ROW 1--> 
         <div class="row">
             <!--3D VIEWER-->
@@ -351,10 +274,6 @@
                                 </scene>
                             </x3d>
                         </div>
-                        <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Front</a>
-                        <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Back</a>
-                        <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Left</a>
-                        <a href="#" class="btn btn-primary btn-responsive btn-sm camera-font">Right</a>
                         <h4 class="card-title" id="title_3d_pepper"></h4>
                         <p class="card-text" id="subtitle_3d_pepper"></p>
                     </div>
@@ -369,22 +288,97 @@
                 </div>
             </div>
 
-        <!--ROW 2-->
-        <div class="row">
-            <!--Info about 3D model-->
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title" id="title_pepper">Coca Cola</div>
-                        <div class="card-text" id="description_pepper"></div>
-                        <a href="#" class="btn btn-primary">Find out more...</a>
-                    </div>
+
+    </div>
+
+
+<!--Controls-->
+    <div class="row" id="interaction">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Cameras</h3>
+                </div>
+                <div class="card-body">
+                    <h4>Camera views</h4>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraFront();">Front</a>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraBack();">Back</a>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraTop();">Top</a>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraBottom();">Bottom</a>
                 </div>
             </div>
         </div>
-
-
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Animation</h3>
+                </div>
+                <div class="card-body">
+                    <h4>Animation options</h4>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="spin();">RotX</a>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotY</a>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotZ</a>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="stopRotation();">Stop</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Render</h3>
+                </div>
+                <div class="card-body">
+                    <h4>Render and lighting options</h4>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Poly</a>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Wire</a>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="wireframe();">Headlight</a>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Default</a>
+                </div>
+            </div>
+        </div>
     </div>
+<!--Coke Description-->
+    <div class="row" id="cokeDescription">
+        <!--Info about 3D model-->
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title" id="title_coke"></div>
+                    <div class="card-text" id="description_coke"></div>
+                    <a href="#" class="btn btn-primary">Find out more...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Sprite Description-->
+    <div class="row" id="spriteDescription">
+        <!--Info about 3D model-->
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title" id="title_sprite"></div>
+                    <div class="card-text" id="description_sprite"></div>
+                    <a href="#" class="btn btn-primary">Find out more...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Dr Pepper Description-->
+    <div class="row" id="pepperDescription">
+        <!--Info about 3D model-->
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title" id="title_pepper">Coca Cola</div>
+                    <div class="card-text" id="description_pepper"></div>
+                    <a href="#" class="btn btn-primary">Find out more...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
 
 
     <br>
@@ -423,6 +417,10 @@
         crossorigin="anonymous"></script>
     <script src="scripts/js/custom.js"></script>
     <script src="scripts/js/getJsonData.js"></script>
+    <script src="scripts/js/swap_restyle.js"></script>
+    <script src="scripts/js/modelInteractions.js"></script>
+
+
 
 </body>
 
