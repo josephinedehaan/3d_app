@@ -1,11 +1,63 @@
 
 counter = 0;
+
+function swapModel(modelFile){
+	document.getElementById('mytest').innerHTML= '<inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/3d_models/'+modelFile+'"></inline>'
+}
+
 $(document).ready(function() {
 	
 	selectPage();
 
-	function selectPage() {
+	function showHome(){
+		$('#home').show();
+		$('#cokeModel').hide();
+		$('#spriteModel').hide();
+		$('#pepperModel').hide();
+		$('#interaction').hide();
+		$('#cokeDescription').hide();
+		$('#spriteDescription').hide(); 
+		$('#pepperDescription').hide(); 
+	}
 
+	function showCoke(){
+		$('#home').hide();
+		$('#cokeModel').show();
+		$('#spriteModel').hide();
+		$('#pepperModel').hide();
+		$('#interaction').show();
+		$('#cokeDescription').show();
+		$('#spriteDescription').hide(); 
+		$('#pepperDescription').hide(); 	 
+	}
+
+	function showSprite(){
+		$('#home').hide();
+		$('#cokeModel').show();
+		swapModel('sprite_bottle.x3d')
+		$('#spriteModel').hide();
+		$('#pepperModel').hide();			
+		$('#interaction').show();
+		$('#cokeDescription').hide();
+		$('#spriteDescription').show(); 
+		$('#pepperDescription').hide(); 
+
+	}
+
+	function showPepper(){
+		$('#home').hide();
+		$('#cokeModel').hide();
+		$('#spriteModel').hide();
+		$('#pepperModel').show();
+		$('#interaction').show();
+		$('#cokeDescription').hide();
+		$('#spriteDescription').hide(); 
+		$('#pepperDescription').show(); 	
+
+	}
+
+
+	function selectPage() {
 		$('#home').show();
 		$('#cokeModel').hide();
 		$('#spriteModel').hide();
@@ -15,51 +67,24 @@ $(document).ready(function() {
 		$('#spriteDescription').hide(); 
 		$('#pepperDescription').hide(); 
 
+		// Navigate to HOME page through various locations
+		$('#navHome').click(showHome);
+		$('#navHomeRight').click(showHome);
 
-		$('#navHome').click(function(){
-			$('#home').show();
-			$('#cokeModel').hide();
-			$('#spriteModel').hide();
-			$('#pepperModel').hide();
-			$('#interaction').hide();
-			$('#cokeDescription').hide();
-			$('#spriteDescription').hide(); 
-			$('#pepperDescription').hide(); 	  
-		});
+		// Navigate to COKE page through various locations
+		$('#navCoke').click(showCoke);
+		$('#navCokeButton').click(showCoke);
 
-		$('#navCoke').click(function(){
-			$('#home').hide();
-			$('#cokeModel').show();
-			$('#spriteModel').hide();
-			$('#pepperModel').hide();
-			$('#interaction').show();
-			$('#cokeDescription').show();
-			$('#spriteDescription').hide(); 
-			$('#pepperDescription').hide(); 	  
-		});
+		// Navitage to SPRITE page through various locations
+		$('#navSprite').click(showSprite);
+		$('#navSpriteButton').click(showSprite);
 
-		$('#navSprite').click(function(){
-			$('#home').hide();
-			$('#cokeModel').hide();
-			$('#spriteModel').show();
-			$('#pepperModel').hide();			
-			$('#interaction').show();
-			$('#cokeDescription').hide();
-			$('#spriteDescription').show(); 
-			$('#pepperDescription').hide(); 	  
-		});
+		// Navigate to DR PEPPER page through various locations
+		$('#navPepper').click(showPepper);
+		$('#navPepperButton').click(showPepper);
 
-		$('#navPepper').click(function(){
-			$('#home').hide();
-			$('#cokeModel').hide();
-			$('#spriteModel').hide();
-			$('#pepperModel').show();
-			$('#interaction').show();
-			$('#cokeDescription').hide();
-			$('#spriteDescription').hide(); 
-			$('#pepperDescription').show(); 	  
-		});
 
+		// THIS IS STILL NOT BEING USED - FIGURE IT OUT
 		// $('#navModels').click(function(){
 		// 	$('#home').hide();
 		// 	$('#about').hide();
@@ -73,17 +98,6 @@ $(document).ready(function() {
 
 });
 
-// // Content swapper for SPA
-// function swap(selected) {   
-//     // first dont display all div id contentes 
-//     document.getElementById('home').style.display = 'none';
-//     document.getElementById('coke').style.display = 'none';
-//     document.getElementById('sprite').style.display = 'none';
-//     document.getElementById('pepper').style.display = 'none';
-
-//     // Then display the selected div id contents
-//     document.getElementById(selected).style.display = 'block';
-// }
 
 // Change navbar color - use this for dark mode eventaully
 function changeLook() {

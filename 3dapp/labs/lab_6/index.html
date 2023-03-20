@@ -46,7 +46,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">   
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" id="navHomeRight" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" 
@@ -104,42 +104,42 @@
             
             <!--COCA COLA-->
             <div class="col-sm-4">
-                <div class="card" id="home_card">
-                    <a href="#" id="home_card_img">
+                <div class="card">
+                    <a href="#" class="home_card_img">
                         <img src="assets/images/coke_square_576.png" class="img-fluid" alt="Image of a Coca Cola bottle">
                     </a>
                     <div class="card-body">
                         <div class="card-title" id="title_cokecard"></div>
                         <div class="card-text" id="description_cokecard"></div>
-                        <a href="javascript: swap('coke')" class="btn btn-sm btn-outline-primary">Find out more...</a>
+                        <a id="navCokeButton" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
                     </div>
                 </div>
             </div>
 
             <!--SPRITE-->
             <div class="col-sm-4">
-                <div class="card" id="home_card">
-                    <a href="#" id="home_card_img">
+                <div class="card">
+                    <a href="#" class="home_card_img">
                         <img src="assets/images/sprite_square_576.png" class="img-fluid" alt="Image of a sprite bottle">
                     </a>
                     <div class="card-body">
                         <div class="card-title" id="title_spritecard"></div>
                         <div class="card-text" id="description_spritecard"></div>
-                        <a href="javascript: swap('sprite')" class="btn btn-sm btn-outline-primary">Find out more...</a>
+                        <a id="navSpriteButton" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
                     </div>
                 </div>
             </div>
 
             <!--DR PEPPER-->
             <div class="col-sm-4">
-                <div class="card" id="home_card">
-                    <a href="#" id="home_card_img">
+                <div class="card">
+                    <a href="#" class="home_card_img">
                         <img src="assets/images/pepper_square_576.png" class="img-fluid" alt="Image of a sprite bottle">
                     </a>
                     <div class="card-body">
                         <div class="card-title" id="title_peppercard"></div>
                         <div class="card-text" id="description_peppercard"></div>
-                        <a href="javascript: swap('pepper')" class="btn btn-sm btn-outline-primary">Find out more...</a>
+                        <a id="navPepperButton" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@
                         <div id="modelStyle">
                             <x3d id="x3d_viewer" width="300px" height="400px">
                                 <scene>
-                                    <transform>
+                                    <transform id="mytest">
                                         <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/3d_models/coke_can.x3d"></inline>
                                     </transform>
                                 </scene>
@@ -188,7 +188,7 @@
                 <div class="card text-left">
                     <div class="card-body">
                         <div class="card-title" id="gallery_title_coke"></div>
-                        <div id="gallery_coke"></div>
+                        <div class="image_gallery" id="gallery_coke"></div>
                     </div>
                 </div>
             </div>
@@ -221,7 +221,7 @@
                         <div id="modelStyle">
                             <x3d width="500px" height="400px">
                                 <scene>
-                                    <inline url="assets/3d_models/sprite_bottle.x3d"></inline>
+                                    <inline nameSpaceName="model" url="assets/3d_models/sprite_bottle.x3d"></inline>
                                 </scene>
                             </x3d>
                         </div>
@@ -235,7 +235,7 @@
                 <div class="col-sm-2">
                     <div class="card text-left">
                         <div class="card-title" id="gallery_title_sprite"></div>
-                        <div id="gallery_sprite"></div>
+                        <div class="image_gallery" id="gallery_sprite"></div>
                     </div>
                 </div>
             </div>
@@ -270,7 +270,9 @@
                         <div id="modelStyle">
                             <x3d width="500px" height="400px">
                                 <scene>
-                                    <inline url="assets/3d_models/dr_pepper.x3d"></inline>
+                                    <transform>
+                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/3d_models/pepper_can.x3d"></inline>
+                                    </transform>
                                 </scene>
                             </x3d>
                         </div>
@@ -283,7 +285,7 @@
                 <div class="col-sm-2">
                     <div class="card text-left">
                         <div class="card-header" id="gallery_title_pepper"></div>
-                        <div class = "gallery" id="gallery_pepper"></div>
+                        <div class="image_gallery" id="gallery_pepper"></div>
                     </div>
                 </div>
             </div>
