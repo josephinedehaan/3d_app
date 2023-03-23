@@ -29,21 +29,15 @@ $(document).ready(function(){
         $('#description_peppercard').html('<p>' + pepper_card.description + '</p>')
 
         // Coke main 3D Model page
-        $('#title_3d_coke').html('<h4>' + coke_3d.x3dModelTitle+'</h4>')
-        $('#subtitle_3d_coke').html('<p>' + coke_3d.x3dCreationMethod+'</p>')
         $('#title_coke').html('<h3>' + coke_3d.title+'</h3>')
         $('#description_coke').html('<p>' + coke_3d.description+'</p>')
 
         // Sprite main 3D Model page
-        $('#title_3d_sprite').html('<h4>' + sprite_3d.x3dModelTitle+'</h4>')
-        $('#subtitle_3d_sprite').html('<p>' + sprite_3d.x3dCreationMethod+'</p>')
         $('#title_sprite').html('<h3>' + sprite_3d.title+'</h3>')
         $('#description_sprite').html('<p>' + sprite_3d.description+'</p>')
 
 
         // Pepper main 3D Model page
-        $('#title_3d_pepper').html('<h4>' + pepper_3d.x3dModelTitle+'</h4>')
-        $('#subtitle_3d_pepper').html('<p>' + pepper_3d.x3dCreationMethod+'</p>')
         $('#title_pepper').html('<h3>' + pepper_3d.title+'</h3>')
         $('#description_pepper').html('<p>' + pepper_3d.description+'</p>')
 
@@ -53,17 +47,7 @@ $(document).ready(function(){
         $('#gallery_title_sprite').html('<h4>' + gallery.galleryTitle + '</h4>')
         $('#gallery_title_pepper').html('<h4>' + gallery.galleryTitle + '</h4>')
 
-
-
-
-
-
-
-
-
-
-
-
     })
 
 })
+
