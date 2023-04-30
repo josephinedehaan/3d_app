@@ -41,8 +41,6 @@ class Controller {
     }
 
 
-
-
     function dbCreateTable()
     {
         echo "Create table function";
