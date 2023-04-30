@@ -39,7 +39,7 @@
 </head>
 
 <body>
-    <h1>Second 3D App Test View</h1>
+    <h1>sneed 3D App Test View</h1>
     <p>If you're seeing the test model 3D image data below, then your basic mvc framework is working</p>
 
     <div class="box">
