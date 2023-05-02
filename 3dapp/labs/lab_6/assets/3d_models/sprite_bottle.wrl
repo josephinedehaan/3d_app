@@ -45,7 +45,7 @@ DEF cam_02 Transform {
   ]
 }
 DEF cam_01 Transform {
-  translation -1258.608653 179.021387 840.716316
+  translation -1345.346559 186.935138 875.402349
   rotation -0.057851 0.982239 -0.178493 0.637443
   scale 1 1 1
   children [ 
@@ -59,7 +59,7 @@ DEF cam_01 Transform {
   ]
 }
 DEF Light_4 Transform {
-  translation -108868.129589 -360277.239153 1773.651881
+  translation 5877.37298 -668237.907161 1773.651881
   children [ 
     DEF LIGHT_Light_4 PointLight {
       location 0 0 0
@@ -71,7 +71,7 @@ DEF Light_4 Transform {
   ]
 }
 DEF Light_3 Transform {
-  translation -108868.129589 420809.462806 1773.651881
+  translation 14406.716457 662958.357911 1773.651881
   children [ 
     DEF LIGHT_Light_3 PointLight {
       location 0 0 0
@@ -83,7 +83,7 @@ DEF Light_3 Transform {
   ]
 }
 DEF Light_2 Transform {
-  translation -108868.129589 0 -150384.895706
+  translation -497129.298636 0 -507285.788405
   children [ 
     DEF LIGHT_Light_2 PointLight {
       location 0 0 0
@@ -95,7 +95,7 @@ DEF Light_2 Transform {
   ]
 }
 DEF Light_1 Transform {
-  translation -108868.129589 0 178908.221501
+  translation -501145.872116 0 497511.133612
   children [ 
     DEF LIGHT_Light_1 PointLight {
       location 0 0 0
@@ -107,7 +107,7 @@ DEF Light_1 Transform {
   ]
 }
 DEF Light Transform {
-  translation 189763.798163 0 0
+  translation 486980.903587 0 0
   children [ 
     DEF LIGHT_Light PointLight {
       location 0 0 0

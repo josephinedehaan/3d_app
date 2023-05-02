@@ -17,7 +17,7 @@
 					<Material
 						diffuseColor="0.87999999523162842 0.15839999914169312 0.15839999914169312"
 						specularColor="0.02500000037252903 0.02500000037252903 0.02500000037252903"
-						shininess="0.02500000037252903" />
+						shininess="1" />
 				</Appearance>
 				<IndexedFaceSet DEF="FACESET_Cylinder_1"
 					ccw="false"
@@ -38,8 +38,8 @@
 				<Appearance DEF="MAT_Mat">
 					<Material
 						diffuseColor="0.57999998331069946 0.57999998331069946 0.57999998331069946"
-						specularColor="0.02500000037252903 0.02500000037252903 0.02500000037252903"
-						shininess="0.02500000037252903"
+						specularColor="0.0099999997764825821 0.0099999997764825821 0.0099999997764825821"
+						shininess="1"
 						transparency="0.8256000280380249" />
 				</Appearance>
 				<IndexedFaceSet DEF="FACESET_Cylinder"
@@ -61,8 +61,7 @@
 				<Appearance DEF="MAT_Mat_1">
 					<Material
 						diffuseColor="0.2800000011920929 0.16902700066566467 0.050400000065565109"
-						specularColor="0.02500000037252903 0.02500000037252903 0.02500000037252903"
-						shininess="0.02500000037252903" />
+						specularColor="0.0099999997764825821 0.0099999997764825821 0.0099999997764825821" shininess="0.02500000037252903" />
 				</Appearance>
 				<IndexedFaceSet DEF="FACESET_Main_bottle"
 					ccw="false"
@@ -146,41 +145,40 @@
 		<PointLight DEF="LIGHT_Light_4"
 			global="true"
 			radius="100000000"
-			intensity="0.80000001192092896" />
+			intensity="0.1" />
 	</Transform>
 	<Transform DEF="Light_3"
 		translation="-108868.1328125 420809.46875 1773.65185546875">
 		<PointLight DEF="LIGHT_Light_3"
 			global="true"
 			radius="100000000"
-			intensity="0.80000001192092896" />
+			intensity="0.1" />
 	</Transform>
 	<Transform DEF="Light_2"
 		translation="-108868.1328125 0 -150384.890625">
 		<PointLight DEF="LIGHT_Light_2"
 			global="true"
 			radius="100000000"
-			intensity="0.80000001192092896" />
+			intensity="0.1" />
 	</Transform>
 	<Transform DEF="Light_1"
 		translation="-108868.1328125 0 178908.21875">
 		<PointLight DEF="LIGHT_Light_1"
 			global="true"
 			radius="100000000"
-			intensity="0.80000001192092896" />
+			intensity="0.1" />
 	</Transform>
 	<Transform DEF="Light"
 		translation="189763.796875 0 0">
 		<PointLight DEF="LIGHT_Light"
 			global="true"
 			radius="100000000"
-			intensity="0.80000001192092896" />
+			intensity="0.1" />
 	</Transform>
-	<TimeSensor DEF="Timer"
-		cycleInterval="2.5"
-		loop="true" />
+	
+	<TimeSensor DEF="Timer" cycleInterval="2.5" loop="true" enabled="false"/>
 	<OrientationInterpolator DEF="ROTKEY_Bottle"
-		key="0 0.40000000596046448 0.80000001192092896"
+key="0 0.40000000596046448 0.80000001192092896"
 		keyValue="0 0 0 0 0 1 0 2.8839459419250488 0 -1 0 1.1455620527267456" />
 	<ROUTE fromNode="Timer" fromField="fraction_changed" toNode="ROTKEY_Bottle" toField="set_fraction" />
 	<ROUTE fromNode="ROTKEY_Bottle" fromField="value_changed" toNode="Bottle" toField="set_rotation" />

@@ -38,7 +38,7 @@
 			description="cam_02" />
 	</Transform>
 	<Transform DEF="cam_01"
-		translation="-1258.608642578125 179.02139282226563 840.71630859375"
+		translation="-1345.3465576171875 186.93513488769531 875.40234375"
 		rotation="-0.057851001620292664 0.9822390079498291 -0.17849299311637878 0.63744300603866577">
 		<Viewpoint DEF="View_cam_01"
 			position="0 0 0"
@@ -48,42 +48,42 @@
 			description="cam_01" />
 	</Transform>
 	<Transform DEF="Light_4"
-		translation="-108868.1328125 -360277.25 1773.65185546875">
+		translation="5877.373046875 -668237.9375 1773.65185546875">
 		<PointLight DEF="LIGHT_Light_4"
-			global="true"
-			radius="100000000"
-			intensity="0.80000001192092896" />
+			global="false"
+			radius="0"
+			intensity="0.1" />
 	</Transform>
 	<Transform DEF="Light_3"
-		translation="-108868.1328125 420809.46875 1773.65185546875">
+		translation="14406.716796875 662958.375 1773.65185546875">
 		<PointLight DEF="LIGHT_Light_3"
-			global="true"
-			radius="100000000"
-			intensity="0.80000001192092896" />
+			global="false"
+			radius="0"
+			intensity="0.1" />
 	</Transform>
 	<Transform DEF="Light_2"
-		translation="-108868.1328125 0 -150384.890625">
+		translation="-497129.3125 0 -507285.78125">
 		<PointLight DEF="LIGHT_Light_2"
-			global="true"
-			radius="100000000"
-			intensity="0.80000001192092896" />
+			global="false"
+			radius="0"
+			intensity="0.1" />
 	</Transform>
 	<Transform DEF="Light_1"
-		translation="-108868.1328125 0 178908.21875">
+		translation="-501145.875 0 497511.125">
 		<PointLight DEF="LIGHT_Light_1"
-			global="true"
-			radius="100000000"
-			intensity="0.80000001192092896" />
+			global="false"
+			radius="0"
+			intensity="0.1" />
 	</Transform>
 	<Transform DEF="Light"
-		translation="189763.796875 0 0">
+		translation="486980.90625 0 0">
 		<PointLight DEF="LIGHT_Light"
-			global="true"
-			radius="100000000"
-			intensity="0.80000001192092896" />
+			global="false"
+			radius="00"
+			intensity="0.1" />
 	</Transform>
 	<Transform DEF="Bottle"
-		rotation="0 -1 0 1.1897499561309814">
+		rotation="0 1.0000001192092896 0 1.3404524326324463">
 		<Transform DEF="Cylinder_1"
 			translation="0 344.664306640625 0">
 			<Shape>
@@ -156,7 +156,8 @@
 	</Transform>
 	<TimeSensor DEF="Timer"
 		cycleInterval="2.5"
-		loop="true" />
+		loop="true"
+		enabled="false" />
 	<OrientationInterpolator DEF="ROTKEY_Bottle"
 		key="0 0.40000000596046448 0.80000001192092896"
 		keyValue="0 0 0 0 0 1 0 2.7792980670928955 0 -1 0 1.1897499561309814" />

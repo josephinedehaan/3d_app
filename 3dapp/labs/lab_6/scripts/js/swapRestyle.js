@@ -2,7 +2,7 @@
 counter = 0;
 
 function swapTitle(title, subtitle) {
-	    $('#title_3d_coke').html('<h4>'+ title +'</h4>')
+	    $('#title_3d_coke').html('<h1>'+ title +'</h1>')
 		$('#subtitle_3d_coke').html('<p>'+ subtitle +'</p>')
 
 
@@ -20,33 +20,39 @@ $(document).ready(function() {
 
 	function showHome(){
 		$('#home').show();
+		// $('modelDiv').hide(); Not working
 		$('#interaction').hide();
 		$('#cokeDescription').hide();
 		$('#spriteDescription').hide(); 
 		$('#pepperDescription').hide(); 
+
 	}
 
 	function showCoke(){
 		$('#home').hide();
 		$('#modelDiv').show();
 		swapModel('coke_can.x3d')
-		swapTitle('Coke X3d Model', 'Model created in Cinema4D, exported to VRDOM via view3dscene')
+		swapTitle('Coca-Cola Classic', 'Model created in Cinema4D, exported to VRDOM via view3dscene')
 		$('#interaction').show();
 		$('#cokeDescription').show();
 		$('#spriteDescription').hide(); 
-		$('#pepperDescription').hide(); 	 
+		$('#pepperDescription').hide();
+		$('#bottle').click(() => {swapModel('coke_bottle.x3d')});
+		$('#can').click(() => {swapModel('coke_can.x3d')});	 
 	}
 
 	function showSprite(){
 		$('#home').hide();
 		$('#modelDiv').show();
 		swapModel('sprite_can.x3d')
-		swapTitle('Sprite X3d Model', 'Model created in Cinema4D, exported to VRDOM via view3dscene')
+		swapTitle('Sprite', 'Model created in Cinema4D, exported to VRDOM via view3dscene')
 		$('#interaction').show();
 		$('#cokeDescription').hide();
 		$('#spriteDescription').show(); 
 		$('#pepperDescription').hide();
-		// $('#bottle').click(alert('test'));	<-- NOT WORKING YET	
+		$('#bottle').click(() => {swapModel('sprite_bottle.x3d')});
+		$('#can').click(() => {swapModel('sprite_can.x3d')});
+
 
 
 
@@ -56,11 +62,13 @@ $(document).ready(function() {
 		$('#home').hide();
 		$('#modelDiv').show();
 		swapModel('pepper_can.x3d')
-		swapTitle('Dr Pepper X3d Model', 'Model created in Cinema4D, exported to VRDOM via view3dscene')		
+		swapTitle('Dr Pepper', 'Model created in Cinema4D, exported to VRDOM via view3dscene')		
 		$('#interaction').show();
 		$('#cokeDescription').hide();
 		$('#spriteDescription').hide(); 
-		$('#pepperDescription').show(); 	
+		$('#pepperDescription').show();
+		$('#bottle').click(() => {swapModel('dr_pepper.x3d')});
+		$('#can').click(() => {swapModel('pepper_can.x3d')});	  	
 
 	}
 

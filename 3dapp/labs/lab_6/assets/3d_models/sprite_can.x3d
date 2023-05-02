@@ -173,9 +173,11 @@
 			</Shape>
 		</Transform>
 	</Transform>
+	
 	<TimeSensor DEF="Timer"
 		cycleInterval="2.5"
-		loop="true" />
+		loop="true"
+		enabled="false" />
 	<OrientationInterpolator DEF="ROTKEY_Can"
 		key="0 0.40000000596046448 0.80000001192092896"
 		keyValue="0 0 0 0 0 1 0 2.5125219821929932 0 -1 0 1.2551079988479614" />

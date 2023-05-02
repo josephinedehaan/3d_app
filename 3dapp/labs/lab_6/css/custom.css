@@ -65,7 +65,7 @@ body {
       margin-bottom: 5px;
 }
 
-#our_brands_header {
+#our_brands_header, #title_3d_coke {
       padding-top: 20px;
       padding-bottom: 20px;
       font-weight: 700;
@@ -74,7 +74,7 @@ body {
 
 p {
       font-family: proxima-nova, sans-serif;;
-      color: gray;
+      color: rgb(76, 76, 76);
 }
 
 
@@ -95,9 +95,9 @@ h1, h2, h3, h4, h5, h6 {
       border: 0px;
 }
 .card {
-      border-width: 1px;
+      border-width: .5px;
       border-color: #000000;
-      border-style: dashed;
+      border-radius: 0;
       margin-top: 0px;
       padding-top: 0px;
       padding-left: 0px;
@@ -116,25 +116,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.nav-item {
+      padding-top: 5px;
+      padding-left: 5px;
+      
+}
 
+.nav-tabs {
+      --bs-nav-tabs-border-width: 0.5px;
+      --bs-nav-tabs-border-radius: 0px;
+      --bs-nav-tabs-border-color: black;
+      --bs-nav-tabs-link-active-border-color: black;
+}
 
 .image_gallery {
       columns: 6;
 }
 
+.img-thumbnail {
+      border: 0px;
+}
 
 
 
 #viewer_3d {
       margin-top: 0px;
-      /* background-color: #d9d9d9; */
+      /* background-color: #ac1d1d; */
 
 }
 
-#modelStyle{
-      border: solid;
-      border-color: #00000081;
-      border-width: 1px;
+.x3dom-canvas {
+      cursor: grab;
+      height: 400px;
+      width: 500px;
+      background-color: #ffffff;
+      /* background-image: url(../assets/images/coke_canvas_bg.jpg); NOT WORKING */
+}
+
+
+.x3dom-canvas-mousedown {
+      cursor: grabbing;
 }
 
 
@@ -298,7 +319,14 @@ h1, h2, h3, h4, h5, h6 {
             padding-right: 0px;
       }
       .image_gallery {
-            columns: 1;
+            columns: 6;
+      }
+      #title_3d_coke {
+            padding-top: 80px;
+      }
+
+      .x3dom-canvas {
+            width: 350px;
       }
  }
 /* Medium devices (tablets, 768px and up) */
@@ -314,6 +342,16 @@ h1, h2, h3, h4, h5, h6 {
             height: 350px;
             margin-top: 8%;
       }
+
+      #title_3d_coke {
+            padding-top: 80px;
+
+      }
+
+      .x3dom-canvas {
+            width: 450px;
+      }
+      
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -344,6 +382,15 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 20px;
             max-width: 75%;
       }
+
+      #title_3d_coke {
+            padding-top: 100px;
+      }
+
+      .x3dom-canvas {
+            width: 550px;
+      }
+
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
@@ -357,7 +404,9 @@ h1, h2, h3, h4, h5, h6 {
       .main_3d_image {
             height: 600px;
             margin-top: 4%;
-
+      }
+      .x3dom-canvas {
+            width: 750px;
       }
  }
 /* XX-Large devices (larger desktops, 1400px and up) */
@@ -388,6 +437,9 @@ h1, h2, h3, h4, h5, h6 {
             margin-top: 5px;
             margin-bottom: 5px;
             max-width: 75%;
+      }
+      .x3dom-canvas {
+            width: 900px;
       }
       
 }
