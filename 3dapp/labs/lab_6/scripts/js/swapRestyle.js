@@ -2,17 +2,18 @@
 counter = 0;
 
 function swapTitle(title, subtitle) {
-	    $('#title_3d_coke').html('<h1>'+ title +'</h1>')
+	    $('#title_3d_coke').html(title)
 		$('#subtitle_3d_coke').html('<p>'+ subtitle +'</p>')
 
 
 }
 
 function swapModel(modelFile){
-	document.getElementById('modelViewer').innerHTML= '<inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/3d_models/'+modelFile+'"></inline>'
-
-
+	 document.getElementById('modelViewer').innerHTML= '<inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/3d_models/'+modelFile+'"></inline>'
+	/*var x3dElement = document.getElementById("modelViewer");
+	x3dElement.getElementsByTagName("inline")[0].setAttribute("url", "assets/3d_models/" + modelFile);*/
 }
+
 
 $(document).ready(function() {
 	

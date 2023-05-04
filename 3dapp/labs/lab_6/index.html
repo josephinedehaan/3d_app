@@ -74,7 +74,7 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="main_3d_image" id="img_one">
+                    <div class="carousel_image" id="img_one">
                         <div id="main_text" class="col-xs-12 col-sm-4">
                             <div id="title_home"></div>
                             <div id="subtitle_home"></div>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="main_3d_image" id="img_two">
+                    <div class="carousel_image" id="img_two">
                         <div id="main_text" class="col-xs-12 col-sm-4">
                             <div id="title_home"></div>
                             <div id="subtitle_home"></div>
@@ -93,11 +93,13 @@
         </div>
 
         <!--MID PAGE DIVIDER-->
+        <hr>
         <div class="col-sm-12">
             <h1 id="our_brands_header">
                 OUR BRANDS
             </h1>
         </div>
+        <hr>
             
         <!--ROW OF DRINKS CARDS-->
         <div class="row">
@@ -149,7 +151,7 @@
 
 <!--Product Page contents-->
     <div id="modelDiv" class="container-fluid main_contents" style="display:none;">
-        <div id="title_3d_coke"></div>
+        <h1 id="title_3d_coke"></h1>
         <div class="row">
             <!--LHS column: 3D viewer and gallery-->
             <div class="col-sm-8">
@@ -187,39 +189,36 @@
             <!--RHS column: buttons and description-->
             <div class= "col-sm-4" id="interaction">
                 <!-- Interaction buttons -->
-                <div class="card card-body"> 
-                    <div class="card">
-                        <div class="card-body">
-                            <h4>Camera views</h4>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraFront();">Front</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraBack();">Back</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraTop();">Top</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraBottom();">Bottom</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h4>Animation options</h4>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="spin();">RotX</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotY</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">RotZ</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="stopRotation();">Stop</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <h6>Render and lighting options</h6>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Poly</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Wire</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="wireframe();">Headlight</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Default</a>
-                        </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Animation options
+                            <div class="btn-group btn-group-toggle">
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="spin();">Play</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="stopRotation();">Pause</a>
+                            </div>                            
+                        </h5>
+                        <h5>Camera views 
+                            <div class="btn-group btn-group-toggle">
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraFront();">Front</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraBack();">Back</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraTop();">Top</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraBottom();">Bottom</a>
+                            </div>
+                        </h5>
+                    
+                        <h5>Render options
+                            <div class="btn-group btn-group-toggle">
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Poly</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="wireframe();">Wire</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Default</a>
+                            </div>
+                        </h5>
                     </div>
                 </div>
                 <!-- Coke Description -->
                 <div class="card" id="cokeDescription">
                     <div class="card-body">
-                        <div class="card-title" id="title_coke"></div>
+                        <!-- <div class="card-title" id="title_coke"></div> -->
                         <div class="card-text" id="description_coke"></div>
                         <a href="#" class="btn btn-primary">Find out more...</a>
                     </div>
