@@ -4,17 +4,22 @@
 $(document).ready(function(){
     $.getJSON("model/data.json", function(jsonObj) {
         home = jsonObj.pageTextData[0]
-        coke_card = jsonObj.pageTextData[1]
-        sprite_card = jsonObj.pageTextData[2]
-        pepper_card = jsonObj.pageTextData[3]
-        coke_3d = jsonObj.pageTextData[4]
-        sprite_3d = jsonObj.pageTextData[5]
-        pepper_3d = jsonObj.pageTextData[6]
-        gallery = jsonObj.pageTextData[7]
+        home_2 = jsonObj.pageTextData[1]
+        coke_card = jsonObj.pageTextData[2]
+        sprite_card = jsonObj.pageTextData[3]
+        pepper_card = jsonObj.pageTextData[4]
+        coke_3d = jsonObj.pageTextData[5]
+        sprite_3d = jsonObj.pageTextData[6]
+        pepper_3d = jsonObj.pageTextData[7]
+        gallery = jsonObj.pageTextData[8]
 
-        // Homepage
-        $('#title_home').html('<h2>' + home.title + '</h2>')
+        // Carousel Slide 1
+        $('#title_home').html('<h1>' + home.title + '</h1>')
         $('#subtitle_home').html('<h3>' + home.subTitle + '</h3>')
+
+        // Carousel Slide 2
+        $('#title_2_home').html('<h1>' + home_2.title + '</h1>')
+        $('#subtitle_2_home').html('<h3>' + home_2.subTitle + '</h3>')
 
         // Coke card
         $('#title_cokecard').html('<h3>' + coke_card.title + '</h3>')
@@ -30,7 +35,7 @@ $(document).ready(function(){
 
         // Coke main 3D Model page
         $('#title_coke').html('<h3>' + coke_3d.title+'</h3>')
-        $('#description_coke').html('<p>' + coke_3d.description+'</p>')
+        $('#description_coke').html('<p class="prod_description">' + coke_3d.description+'</p>')
 
         // Sprite main 3D Model page
         $('#title_sprite').html('<h3>' + sprite_3d.title+'</h3>')
@@ -41,11 +46,6 @@ $(document).ready(function(){
         $('#title_pepper').html('<h3>' + pepper_3d.title+'</h3>')
         $('#description_pepper').html('<p>' + pepper_3d.description+'</p>')
 
-
-        // Gallery text
-        $('#gallery_title_coke').html('<h4>' + gallery.galleryTitle + '</h4>')
-        $('#gallery_title_sprite').html('<h4>' + gallery.galleryTitle + '</h4>')
-        $('#gallery_title_pepper').html('<h4>' + gallery.galleryTitle + '</h4>')
 
     })
 

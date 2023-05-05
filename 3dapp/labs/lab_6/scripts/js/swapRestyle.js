@@ -1,11 +1,8 @@
 
 counter = 0;
 
-function swapTitle(title, subtitle) {
+function swapTitle(title) {
 	    $('#title_3d_coke').html(title)
-		$('#subtitle_3d_coke').html('<p>'+ subtitle +'</p>')
-
-
 }
 
 function swapModel(modelFile){

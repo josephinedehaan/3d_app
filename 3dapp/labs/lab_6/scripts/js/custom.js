@@ -21,7 +21,7 @@ $(document).ready(function() {
             for (var i=0; i<response.length; i++) {
                 // and continue to builde the html code for the gallery
                 // alert(response[i])
-                htmlCode += '<a href="assets/images/gallery_images/' + '' + response[i] +'">';
+                htmlCode += '<a href="assets/images/gallery_images/' + '' + response[i] +'" data-fancybox="gallery">';
                 htmlCode += '<img class="card-img-top gallery img-thumbnail" src="assets/images/gallery_images/' + response[i] + '"/>';
                 htmlCode += '</a>';
                 
@@ -37,3 +37,10 @@ $(document).ready(function() {
     }
 
 });
+
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  });
+
+  
+  

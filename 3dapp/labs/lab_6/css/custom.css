@@ -34,22 +34,23 @@ body {
 
 .carousel_image{
       margin-top: 0;
-      height: 697px;
+      height: 864px;
       width: 100%;
       display: inline-block;
       background-repeat: no-repeat;
       background-size: cover;
 }
 
-#main_text {
+.main_text {
       margin: 5%;
       width: 90%;
       display: block;
       padding: 10px;
       padding-top: 5px;
       max-width: 68%;
-      color: white;
+      color: rgb(255, 255, 255);
 }
+
 
 #main_text h2 {
       font-size: 22px;
@@ -93,8 +94,24 @@ h1, h2, h3, h4, h5, h6 {
       background-color: red;
       border: 0px;
 }
+
+.btn-secondary {
+      background-color: red;
+      border-radius: 15px;
+      border-width: 1px;
+      border-color: red;
+
+}
+
+.btn-secondary:hover {
+      background-color: rgb(255, 255, 255);
+      border-color: #ff0000;
+      color: red;
+      border-width: 1px;
+      border-radius: 15px;
+}
 .card {
-      border-width: .5px;
+      border-width: 0px;
       border-color: #000000;
       border-radius: 0;
       margin-top: 0px;
@@ -116,8 +133,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #viewer_3d .nav-item {
-      padding-top: 5px;
-      padding-left: 5px;
       width: 50%;
       
 }
@@ -140,6 +155,11 @@ h1, h2, h3, h4, h5, h6 {
       /* background-color: #ac1d1d; */
 
 }
+
+.prod_description {
+      line-height: 30px;
+}
+
 
 .x3dom-canvas {
       cursor: grab;
@@ -206,20 +226,20 @@ h1, h2, h3, h4, h5, h6 {
       min-height: 70px;
 }
 
-/* THIS CHUNK OF CODE IS MESSY AND NEEDS TIDYING!! */
 #navbar_coca_cola .navbar-brand {
       color: rgb(255, 255, 255);
 }
 
-.navbar_coca_cola .navbar-brand:hover {
+#navbar_coca_cola .navbar-brand:hover {
       color: rgb(255, 0, 0);
 }
+
+
 
 #navbar_coca_cola .navbar-nav > li > a {
       color: white;
 }
-#navbar_coca_cola .navbar-nav > li > a:hover,
-#navbar_coca_cola .navbar-nav > li > a:focus {
+#navbar_coca_cola .navbar-nav > li > a:hover{
       color: rgb(255, 0, 0);
 }
 
@@ -227,34 +247,16 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 0px;
 }
 
-#navbar_coca_cola .navbar-nav .nav-item > .active,
-#navbar_coca_cola .navbar-nav > .active > a:hover,
-#navbar_coca_cola .navbar-nav > .active > a:focus {
-    color:  #ffffff; /* Font color for active font */
-    background-color: #616161;
-}
 
 #navbar_coca_cola .navbar-toggler {
       border-color: white;
 }
 
-/* FIX THIS: what is this  MESS LOL?*/
-
-/* .navbar_coca_cola .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E);
-      
-} */
-
-/* FIX THIS: related to above commented out block of code */
-.navbar_coca_cola .navbar-toggler {
-      outline: none !important;
-}
 
 
 .dropdown-menu {
       text-align: -webkit-left;
       background-color: #000000;
-      margin-top: 13px;
 }
 
 .dropdown-menu .dropdown-item {
@@ -266,12 +268,12 @@ h1, h2, h3, h4, h5, h6 {
       background-color: #000000;
 }
 
+
 .footer {
-      /* color: #030303; */
       background-color: #000000;
       height: 50px;
-      /* position: fixed; */
-      bottom: 0;
+      position:static;
+      bottom: 0px;
       width: 100%;
 }
 .navbar-text > a {
