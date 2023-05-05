@@ -132,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* not working, #viewer_3d no longer correct id, it's on rhs col now */
 #viewer_3d .nav-item {
       width: 50%;
       

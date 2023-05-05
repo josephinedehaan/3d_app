@@ -169,8 +169,8 @@
 
 	<!-- THIS IS WHERE THE ANIMATION HAPPENS  -->
 	
-	<TimeSensor DEF="Timer" cycleInterval="2.5" loop="true" enabled="false"/>
-	<OrientationInterpolator DEF="ROTKEY_Can" key="0 0.40000000596046448 0.80000001192092896" keyValue="0 0 0 0 0 1 0 1.1058429479598999 0 1 0 2.8148679733276367" />
+	<TimeSensor DEF="Timer" cycleInterval="3" loop="true" enabled="false"/>
+	<OrientationInterpolator DEF="ROTKEY_Can" key="0 0.25 0.5 0.75 1" keyValue="0 1 0 0 0 1 0 1.5 0 1 0 3.1  0 1 0 4.7  0 1 0 6.2" />
 	<ROUTE fromNode="Timer" fromField="fraction_changed" toNode="ROTKEY_Can" toField="set_fraction" />
 	<ROUTE fromNode="ROTKEY_Can" fromField="value_changed" toNode="Can" toField="set_rotation" />
 </Scene>

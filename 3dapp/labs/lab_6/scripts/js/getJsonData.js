@@ -39,12 +39,12 @@ $(document).ready(function(){
 
         // Sprite main 3D Model page
         $('#title_sprite').html('<h3>' + sprite_3d.title+'</h3>')
-        $('#description_sprite').html('<p>' + sprite_3d.description+'</p>')
+        $('#description_sprite').html('<p class="prod_description">' + sprite_3d.description+'</p>')
 
 
         // Pepper main 3D Model page
         $('#title_pepper').html('<h3>' + pepper_3d.title+'</h3>')
-        $('#description_pepper').html('<p>' + pepper_3d.description+'</p>')
+        $('#description_pepper').html('<p class="prod_description">' + pepper_3d.description+'</p>')
 
 
     })

@@ -17,12 +17,14 @@ $(document).ready(function() {
 	selectPage();
 
 	function showHome(){
+		$('#modelDiv').hide();
 		$('#home').show();
-		// $('modelDiv').hide(); Not working
 		$('#interaction').hide();
 		$('#cokeDescription').hide();
 		$('#spriteDescription').hide(); 
 		$('#pepperDescription').hide(); 
+	
+
 
 	}
 

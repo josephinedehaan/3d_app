@@ -172,6 +172,7 @@
                             </x3d>
                         </div>
                     </div>
+                    <hr>
                     <!--Image gallery-->
                     <div class="card card-body">
                         <div class="image_gallery" id="gallery_coke"></div>
@@ -194,7 +195,7 @@
 
                 </div>
                 <!-- Coke Description -->
-                <div class="card">
+                <div class="card" id="cokeDescription">
                     <div class="card-body">
                         <!-- <div class="card-title" id="title_coke"></div> -->
                         <div id="description_coke"></div>
@@ -204,17 +205,15 @@
                 <!-- Sprite Description -->
                 <div class="card" id="spriteDescription">
                     <div class="card-body">
-                        <div class="card-title" id="title_sprite"></div>
                         <div class="card-text" id="description_sprite"></div>
-                        <a href="#" class="btn btn-primary">Find out more...</a>
+                        <a href="#" class="btn btn-secondary">Buy</a>
                     </div>
                 </div>
                 <!-- Pepper Description -->
                 <div class="card" id="pepperDescription">
                     <div class="card-body">
-                        <div class="card-title" id="title_pepper"></div>
                         <div class="card-text" id="description_pepper"></div>
-                        <a href="#" class="btn btn-primary">Find out more...</a>
+                        <a href="#" class="btn btn-secondary">Buy</a>
                     </div>
                 </div>
                 <!-- Interaction buttons -->
@@ -224,6 +223,8 @@
                         <h6>Animation options
                             <div class="btn-group btn-group-toggle">
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="spin();">Play</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(8);">Fast</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(1);">Slow</a>
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="stopRotation();">Pause</a>
                             </div>                            
                         </h6>
@@ -240,9 +241,9 @@
                     
                         <h6>Render options
                             <div class="btn-group btn-group-toggle">
-                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Poly</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="vertex();">Vertex</a>
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="wireframe();">Wire</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font">Default</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="poly();">Default</a>
                             </div>
                         </h6>
                         <hr>

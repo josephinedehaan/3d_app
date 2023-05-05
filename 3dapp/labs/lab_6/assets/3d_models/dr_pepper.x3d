@@ -144,12 +144,8 @@
 			global="true"
 			radius="100000000" />
 	</Transform>
-	<TimeSensor DEF="Timer"
-		cycleInterval="2.5"
-		loop="true" />
-	<OrientationInterpolator DEF="ROTKEY_Cup"
-		key="0 0.40000000596046448 0.80000001192092896"
-		keyValue="0 0 0 0 0 1 0 2.995107889175415 0 -1 0 1.0133839845657349" />
+	<TimeSensor DEF="Timer" cycleInterval="3" loop="true" enabled="false"/>
+	<OrientationInterpolator DEF="ROTKEY_Cup" key="0 0.25 0.5 0.75 1" keyValue="0 1 0 0 0 1 0 1.5 0 1 0 3.1  0 1 0 4.7  0 1 0 6.2" />
 	<ROUTE fromNode="Timer" fromField="fraction_changed" toNode="ROTKEY_Cup" toField="set_fraction" />
 	<ROUTE fromNode="ROTKEY_Cup" fromField="value_changed" toNode="Cup" toField="set_rotation" />
 </Scene>
