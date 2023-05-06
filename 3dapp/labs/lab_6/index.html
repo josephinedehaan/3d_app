@@ -46,15 +46,14 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">   
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" id="navHomeRight" href="#">Home</a>
-                    </li>
+                    </li>            
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" 
-                        title="About Web 3D Applications" data-content="3DApps is a final year and postgraduate module ...">About</a>
+                        title="Josephine de Haan--Montes" data-content="jd623@sussex.ac.uk">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle dropdown-menu-end" href="#" id="navbardrop" data-toggle="dropdown">Drinks</a>
@@ -65,14 +64,17 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="changeLook()">Night mode</a>
+                        <a class="nav-link" id="navAbout" href="#">About</a>
                     </li>
                 </ul>
             </div>
         </div>       
     </nav>
 
-<!-- HOME MAIN CONTENTS-->
+
+
+
+<!-- PAGE 1: Landing page-->
     <div id="home" class="container-fluid main_contents">
         <!--CAROUSEL-->
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -110,7 +112,7 @@
             
             <!--COCA COLA-->
             <div class="col-sm-4">
-                <div class="card">
+                <div class="card borderless">
                     <a href="#" class="home_card_img">
                         <img src="assets/images/coke_square_576.png" class="img-fluid" alt="Image of a Coca Cola bottle">
                     </a>
@@ -124,7 +126,7 @@
 
             <!--SPRITE-->
             <div class="col-sm-4">
-                <div class="card">
+                <div class="card borderless">
                     <a href="#" class="home_card_img">
                         <img src="assets/images/sprite_square_576.png" class="img-fluid" alt="Image of a sprite bottle">
                     </a>
@@ -138,7 +140,7 @@
 
             <!--DR PEPPER-->
             <div class="col-sm-4">
-                <div class="card">
+                <div class="card borderless">
                     <a href="#" class="home_card_img">
                         <img src="assets/images/pepper_square_576.png" class="img-fluid" alt="Image of a sprite bottle">
                     </a>
@@ -153,7 +155,9 @@
 
     </div>
 
-<!--Product Page contents-->
+
+
+<!--PAGE 2: Product Page contents-->
     <div id="modelDiv" class="container-fluid main_contents" style="display:none;">
         <h1 id="title_3d_coke"></h1>
         <hr>
@@ -172,9 +176,8 @@
                             </x3d>
                         </div>
                     </div>
-                    <hr>
                     <!--Image gallery-->
-                    <div class="card card-body">
+                    <div class="card gallery">
                         <div class="image_gallery" id="gallery_coke"></div>
                     </div>
                 </div>
@@ -195,7 +198,7 @@
 
                 </div>
                 <!-- Coke Description -->
-                <div class="card" id="cokeDescription">
+                <div class="card description" id="cokeDescription">
                     <div class="card-body">
                         <!-- <div class="card-title" id="title_coke"></div> -->
                         <div id="description_coke"></div>
@@ -203,14 +206,14 @@
                     </div>
                 </div>
                 <!-- Sprite Description -->
-                <div class="card" id="spriteDescription">
+                <div class="card description" id="spriteDescription">
                     <div class="card-body">
                         <div class="card-text" id="description_sprite"></div>
                         <a href="#" class="btn btn-secondary">Buy</a>
                     </div>
                 </div>
                 <!-- Pepper Description -->
-                <div class="card" id="pepperDescription">
+                <div class="card description" id="pepperDescription">
                     <div class="card-body">
                         <div class="card-text" id="description_pepper"></div>
                         <a href="#" class="btn btn-secondary">Buy</a>
@@ -219,12 +222,11 @@
                 <!-- Interaction buttons -->
                 <div class="card">
                     <div class="card-body">
-                        <hr>
                         <h6>Animation options
                             <div class="btn-group btn-group-toggle">
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="spin();">Play</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(8);">Fast</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(1);">Slow</a>
+                                <!-- <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(1);">Fast</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(10);">Slow</a> -->
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="stopRotation();">Pause</a>
                             </div>                            
                         </h6>
@@ -237,8 +239,7 @@
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraBottom();">Bottom</a>
                             </div>
                         </h6>
-                        <hr>
-                    
+                        <hr>                    
                         <h6>Render options
                             <div class="btn-group btn-group-toggle">
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="vertex();">Vertex</a>
@@ -246,13 +247,47 @@
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="poly();">Default</a>
                             </div>
                         </h6>
-                        <hr>
                     </div>
                 </div>
             </div>
 
 
         </div>
+    </div>
+
+<!-- PAGE3: Information page for assessment -->
+    <div id="aboutPage" class="container-fluid main_contents" style="display:none;">
+        <div class="row">
+            <div class="card about">
+                <div class="card-body">
+                    <div class="card-title bigger">Information and links</div>
+                        <hr>
+                        <div class="card-text">
+                            <ul>
+                                <li>GitHub repo</li>
+                                <li>GitHub repo for 3D Models</li>
+
+                            </ul>
+                        </div>
+                    <div class="card-title bigger">Points of deeper understanding</div>
+                        <hr>
+                        <div class="card-text">
+                            <ul>
+                                <li>Created and exported models in Cinema 4D</li>
+                                <li>Created X amount of renders using C4D's Standard render engine</li>
+                                <li>Created a total of 6 models, 2 for each product</li>
+                                <li>Successfully implemented wireframe, vertex and poly buttons</li>
+                                <li>GitHub version control</li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
     </div>
 
 

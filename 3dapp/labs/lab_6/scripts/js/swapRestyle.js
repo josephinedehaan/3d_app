@@ -23,6 +23,8 @@ $(document).ready(function() {
 		$('#cokeDescription').hide();
 		$('#spriteDescription').hide(); 
 		$('#pepperDescription').hide(); 
+		$('#aboutPage').hide(); 
+
 	
 
 
@@ -37,6 +39,7 @@ $(document).ready(function() {
 		$('#cokeDescription').show();
 		$('#spriteDescription').hide(); 
 		$('#pepperDescription').hide();
+		$('#aboutPage').hide(); 
 		$('#bottle').click(() => {swapModel('coke_bottle.x3d')});
 		$('#can').click(() => {swapModel('coke_can.x3d')});	 
 	}
@@ -50,6 +53,7 @@ $(document).ready(function() {
 		$('#cokeDescription').hide();
 		$('#spriteDescription').show(); 
 		$('#pepperDescription').hide();
+		$('#aboutPage').hide(); 
 		$('#bottle').click(() => {swapModel('sprite_bottle.x3d')});
 		$('#can').click(() => {swapModel('sprite_can.x3d')});
 
@@ -67,8 +71,20 @@ $(document).ready(function() {
 		$('#cokeDescription').hide();
 		$('#spriteDescription').hide(); 
 		$('#pepperDescription').show();
+		$('#aboutPage').hide(); 
 		$('#bottle').click(() => {swapModel('dr_pepper.x3d')});
 		$('#can').click(() => {swapModel('pepper_can.x3d')});	  	
+
+	}
+
+	function showAbout(){
+		$('#modelDiv').hide();
+		$('#home').hide();
+		$('#interaction').hide();
+		$('#cokeDescription').hide();
+		$('#spriteDescription').hide(); 
+		$('#pepperDescription').hide(); 
+		$('#aboutPage').show(); 
 
 	}
 
@@ -82,6 +98,7 @@ $(document).ready(function() {
 		$('#cokeDescription').hide();
 		$('#spriteDescription').hide(); 
 		$('#pepperDescription').hide(); 
+		$('aboutPage').hide();
 
 		// Navigate to HOME page through various locations
 		$('#navHome').click(showHome);
@@ -98,6 +115,9 @@ $(document).ready(function() {
 		// Navigate to DR PEPPER page through various locations
 		$('#navPepper').click(showPepper);
 		$('#navPepperButton').click(showPepper);
+
+		// Navigate to ABOUT page
+		$('#navAbout').click(showAbout);
 
 
 

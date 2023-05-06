@@ -16,6 +16,13 @@ body {
       background-color: white;
 }
 
+.row {
+      max-width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+
+}
+
 .main_contents {
       margin-top: 70px;
       margin-bottom: 0px;
@@ -110,34 +117,51 @@ h1, h2, h3, h4, h5, h6 {
       border-width: 1px;
       border-radius: 15px;
 }
-.card {
+
+.card.borderless {
       border-width: 0px;
-      border-color: #000000;
-      border-radius: 0;
+}
+
+
+.card {
+      border-width: 1px;
       margin-top: 0px;
       padding-top: 0px;
       padding-left: 0px;
       padding-right: 0px;
-      margin-bottom: 10px;
-      background-color: rgb(255, 255, 255);
+      padding-bottom: 0px;
+      /* margin-bottom: 10px; */
+      /* background-color: rgb(255, 255, 255); */
       font-size: 13px;
       text-align: center;
   } 
 
+.card.description {
+      border-top: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      margin-bottom: 10px;
+}
 
+.card.gallery {
+      margin-bottom: 10px;
+      margin-left: 10px;
+      /* margin-right: 10px; */
+}
+
+.card-title.bigger {
+      font-size: 16px;
+}
+
+.card.about {
+      text-align: left;
+      color: rgb(51, 50, 50);
+}
 
 .home_card_img {
       padding-left: 40px;
       padding-right: 40px;
 }
-
-
-/* not working, #viewer_3d no longer correct id, it's on rhs col now */
-#viewer_3d .nav-item {
-      width: 50%;
-      
-}
-
 
 .image_gallery {
       columns: 6;
@@ -153,12 +177,11 @@ h1, h2, h3, h4, h5, h6 {
 #viewer_3d {
       margin-top: 0px;
       border-width: 0px;
-      /* background-color: #ac1d1d; */
 
 }
 
 .prod_description {
-      line-height: 30px;
+      line-height: 25px;
 }
 
 
@@ -231,15 +254,15 @@ h1, h2, h3, h4, h5, h6 {
       color: rgb(255, 255, 255);
 }
 
-#navbar_coca_cola .navbar-brand:hover {
+#navbar_coca_cola .navbar-brand:hover, .nav-link.active:hover {
       color: rgb(255, 0, 0);
 }
-
 
 
 #navbar_coca_cola .navbar-nav > li > a {
       color: white;
 }
+
 #navbar_coca_cola .navbar-nav > li > a:hover{
       color: rgb(255, 0, 0);
 }
@@ -253,7 +276,9 @@ h1, h2, h3, h4, h5, h6 {
       border-color: white;
 }
 
-
+.nav-link {
+      font-family: proxima-nova, sans-serif;
+}
 
 .dropdown-menu {
       text-align: -webkit-left;
@@ -262,6 +287,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .dropdown-menu .dropdown-item {
       color: #ffffff;
+      font-family: proxima-nova, sans-serif;
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -291,6 +317,12 @@ h1, h2, h3, h4, h5, h6 {
 .social {
       padding-top: 0px;
 }
+
+#aboutPage {
+      max-width: 95%;
+}
+
+
 
 
 /* X-Small devices (portrait phones, less than 576px)
@@ -326,6 +358,10 @@ h1, h2, h3, h4, h5, h6 {
 
       .x3dom-canvas {
             width: 350px;
+      }
+
+      #aboutPage {
+            padding-top: 80px;
       }
  }
 /* Medium devices (tablets, 768px and up) */
