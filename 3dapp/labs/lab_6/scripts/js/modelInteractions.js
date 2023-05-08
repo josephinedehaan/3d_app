@@ -12,6 +12,7 @@ function stopRotation()
 	document.getElementById('model__Timer').setAttribute('enabled', spinning.toString());
 }
 
+// This function is not working yet
 function changeSpeed(speed)
 {
 	document.getElementById('model__Timer').setAttribute('cycleInterval', speed);
@@ -25,8 +26,6 @@ function animateModel()
     else
         document.getElementById('model__Timer').setAttribute('enabled', 'false');
 }
-
-
 
 var currentmode = 0;
 
@@ -80,15 +79,6 @@ function vertex() {
     }
     currentmode = 2;
 }
-
-
-// var lightOn = true;
-
-// function headlight()
-// {
-// 	lightOn = !lightOn;
-// 	document.getElementById('model__headlight').setAttribute('headlight', lightOn.toString());
-// }
 
 function cameraFront()
 {

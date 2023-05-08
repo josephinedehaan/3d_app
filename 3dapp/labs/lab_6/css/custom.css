@@ -3,16 +3,8 @@
     font-family: cocaColaFont;
     src: url(../assets/fonts/loki_cola/LOKICOLA.TTF)
 }
-@font-face {
-      font-family: Oswald;
-      src: url(../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf)
-}
-@font-face {
-      font-family: openSans;
-      src: url(../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf)
-}
 
-body {
+#body_dark {
       background-color: white;
 }
 

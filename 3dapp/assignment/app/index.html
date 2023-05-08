@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mzk7jvx.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
+    <link rel="stylesheet" href="css/custom.css" src="https://www.x3dom.org/download/x3dom.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
+
+    <title>Coca Cola Journey</title>
+
+
+
+</head>
+
+
+<body id="body_dark">
+<!--NAVBAR-->
+    <nav class="navbar navbar-expand-sm fixed-top" id="navbar_coca_cola">
+        <div class="container-fluid">
+
+            <!--Brand-->
+            <div class="logo">
+                <a class="navbar-brand" id="navHome" href="#">
+                    <h1>1</h1>
+                    <h1>oca</h1>
+                    <h2>Cola</h2>
+                    <h3>Journey</h3>
+                    <p>Refreshing the world, one story at a time</p>
+                </a>
+            </div>
+
+            <!--Hamburger icon-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">   
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="navHomeRight" href="#">Home</a>
+                    </li>            
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" 
+                        title="Josephine de Haan--Montes" data-content="jd623@sussex.ac.uk">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-menu-end" href="#" id="navbardrop" data-toggle="dropdown">Drinks</a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" id="navCoke" href="#">Coca Cola</a>
+                            <a class="dropdown-item" id="navSprite" href="#">Sprite</a>
+                            <a class="dropdown-item" id="navPepper" href="#">Dr Pepper</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navAbout" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>       
+    </nav>
+
+
+
+
+<!-- PAGE 1: Landing page-->
+    <div id="home" class="container-fluid main_contents">
+        <!--CAROUSEL-->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel_image" id="img_one">
+                        <div class="col-xs-12 col-sm-4 main_text">
+                            <div id="title_home"></div>
+                            <div id="subtitle_home"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel_image" id="img_two">
+                        <div class="col-xs-12 col-sm-4 main_text" id="slide_two">
+                            <div id="title_2_home"></div>
+                            <div id="subtitle_2_home"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--MID PAGE DIVIDER-->
+        <hr>
+        <div class="col-sm-12">
+            <h1 id="our_brands_header">
+                OUR BRANDS
+            </h1>
+        </div>
+        <hr>
+            
+        <!--ROW OF DRINKS CARDS-->
+        <div class="row">
+            
+            <!--COCA COLA-->
+            <div class="col-sm-4">
+                <div class="card borderless">
+                    <a href="#" class="home_card_img">
+                        <img src="assets/images/coke_square_576.png" class="img-fluid" alt="Image of a Coca Cola bottle">
+                    </a>
+                    <div class="card-body">
+                        <div class="card-title" id="title_cokecard"></div>
+                        <div class="card-text" id="description_cokecard"></div>
+                        <a id="navCokeButton" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--SPRITE-->
+            <div class="col-sm-4">
+                <div class="card borderless">
+                    <a href="#" class="home_card_img">
+                        <img src="assets/images/sprite_square_576.png" class="img-fluid" alt="Image of a sprite bottle">
+                    </a>
+                    <div class="card-body">
+                        <div class="card-title" id="title_spritecard"></div>
+                        <div class="card-text" id="description_spritecard"></div>
+                        <a id="navSpriteButton" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--DR PEPPER-->
+            <div class="col-sm-4">
+                <div class="card borderless">
+                    <a href="#" class="home_card_img">
+                        <img src="assets/images/pepper_square_576.png" class="img-fluid" alt="Image of a sprite bottle">
+                    </a>
+                    <div class="card-body">
+                        <div class="card-title" id="title_peppercard"></div>
+                        <div class="card-text" id="description_peppercard"></div>
+                        <a id="navPepperButton" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+<!--PAGE 2: Product Page contents-->
+    <div id="modelDiv" class="container-fluid main_contents" style="display:none;">
+        <h1 id="title_3d_coke"></h1>
+        <hr>
+        <div class="row">
+            <!--LHS column: 3D viewer and gallery-->
+            <div class="col-sm-8">
+                <div class="card text-left" id="viewer_3d">
+                    <div class="card-body">
+                        <div id="modelStyle">
+                            <x3d id="x3d_viewer">
+                                <scene>
+                                    <transform id="modelViewer">
+                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/3d_models/coke_can.x3d"></inline>
+                                    </transform>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>
+                    <!--Image gallery-->
+                    <div class="card gallery">
+                        <div class="image_gallery" id="gallery_coke"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--RHS column: buttons and description-->
+            <div class= "col-sm-4" id="interaction">
+                <div>
+                    <ul class = "nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="can" href="#">Can</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="bottle" href="#">Bottle</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Coke Description -->
+                <div class="card description" id="cokeDescription">
+                    <div class="card-body">
+                        <!-- <div class="card-title" id="title_coke"></div> -->
+                        <div id="description_coke"></div>
+                        <a href="#" class="btn btn-secondary">Buy</a>
+                    </div>
+                </div>
+                <!-- Sprite Description -->
+                <div class="card description" id="spriteDescription">
+                    <div class="card-body">
+                        <div class="card-text" id="description_sprite"></div>
+                        <a href="#" class="btn btn-secondary">Buy</a>
+                    </div>
+                </div>
+                <!-- Pepper Description -->
+                <div class="card description" id="pepperDescription">
+                    <div class="card-body">
+                        <div class="card-text" id="description_pepper"></div>
+                        <a href="#" class="btn btn-secondary">Buy</a>
+                    </div>
+                </div>
+                <!-- Interaction buttons -->
+                <div class="card">
+                    <div class="card-body">
+                        <h6>Animation options
+                            <div class="btn-group btn-group-toggle">
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="spin();">Play</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(1);">Fast</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(10);">Slow</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="stopRotation();">Pause</a>
+                            </div>                            
+                        </h6>
+                        <hr>
+                        <h6>Camera views 
+                            <div class="btn-group btn-group-toggle">
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraFront();">Front</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraBack();">Back</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraTop();">Top</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="cameraBottom();">Bottom</a>
+                            </div>
+                        </h6>
+                        <hr>                    
+                        <h6>Render options
+                            <div class="btn-group btn-group-toggle">
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="vertex();">Vertex</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="wireframe();">Wire</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="poly();">Default</a>
+                            </div>
+                        </h6>
+                        <h6>Dark mode
+                            <div class="btn-group btn-group-toggle">
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeLook();">On</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeBack();">Off</a>
+                            </div>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+<!-- PAGE3: Information page for assessment -->
+    <div id="aboutPage" class="container-fluid main_contents" style="display:none;">
+        <div class="row">
+            <div class="card about">
+                <div class="card-body">
+                    <div class="card-title bigger">Information and links</div>
+                        <hr>
+                        <div class="card-text">
+                            <ul>
+                                <li>GitHub repo</li>
+                                <li>GitHub repo for 3D Models</li>
+
+                            </ul>
+                        </div>
+                    <div class="card-title bigger">Points of deeper understanding</div>
+                        <hr>
+                        <div class="card-text">
+                            <ul>
+                                <li>Created and exported models in Cinema 4D</li>
+                                <li>Created X amount of renders using C4D's Standard render engine</li>
+                                <li>Created a total of 6 models, 2 for each product</li>
+                                <li>Successfully implemented wireframe, vertex and poly buttons</li>
+                                <li>GitHub version control</li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+    
+    
+
+
+
+    <br>
+
+<!-- FOOTER -->
+    <nav class="navbar navbar-expand-sm footer">
+        <div class="container-fluid">
+            <div class="navbar-text float-left copyright">
+                <p><span class="align-baseline">2023 Web 3D Applications</span></p>
+            </div>
+            <div class="navbar-text float-right social">
+                <a href="https://www.facebook.com/Coca-Cola/"><i class="fa-brands fa-facebook" style="font-size: 20px;color:rgb(255, 255, 255); padding:3px"></i></a>
+                <a href="https://twitter.com/CocaCola"><i class="fa-brands fa-twitter" style="font-size:20px; color:rgb(255, 255, 255); padding:3px"></i></a>
+                <a href="https://www.instagram.com/cocacola/"><i class="fa-brands fa-instagram" style="font-size:20px; color:rgb(255, 255, 255); padding:3px"></i></a>
+                <a href="https://www.youtube.com/user/cocacola"><i class="fa-brands fa-youtube" style="font-size:20px; color:rgb(255, 255, 255); padding:3px"></i></a>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <!-- <script src="assets/font_awesome/js/all.js"></script> -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script   src="https://code.jquery.com/jquery-3.6.4.min.js"   
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="   
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="scripts/js/custom.js"></script>
+    <script src="scripts/js/getJsonData.js"></script>
+    <script src="scripts/js/swapRestyle.js"></script>
+    <script src="scripts/js/modelInteractions.js"></script>
+
+
+
+</body>
+
+</html>

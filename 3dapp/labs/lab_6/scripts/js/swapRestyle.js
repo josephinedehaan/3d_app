@@ -56,10 +56,6 @@ $(document).ready(function() {
 		$('#aboutPage').hide(); 
 		$('#bottle').click(() => {swapModel('sprite_bottle.x3d')});
 		$('#can').click(() => {swapModel('sprite_can.x3d')});
-
-
-
-
 	}
 
 	function showPepper(){
@@ -138,33 +134,15 @@ $(document).ready(function() {
 
 // Change navbar color - use this for dark mode eventaully
 function changeLook() {
-    counter += 1;
-    switch (counter) {
-        case 1:
-        document.getElementById('navbar_coca_cola').style.backgroundColor = 'lightblue';
-        break;
-
-        case 2:
-        document.getElementById('navbar_coca_cola').style.backgroundColor = 'pink';
-        break;
-
-        case 3:
-        document.getElementById('navbar_coca_cola').style.backgroundColor = 'purple';
-        break;
-        case 4:
-        counter = 0;
-        document.getElementById('navbar_coca_cola').style.backgroundColor = 'black';
-        break;
+    document.getElementById('body_dark').style.backgroundColor = 'rgb(43, 43, 43)';    
+	document.getElementById('cokeDescription').style.backgroundColor = 'rgb(43, 43, 43)';   
+	document.getElementById('cokeDescription').style.borderColor = 'dark gray';   
 
 
-
-        }
-
-    }
+}
 
 // Not implented yet
 function changeBack() {
-    document.getElementById('body').style.backgroundColor = 'white';
-    document.getElementById('header').style.backgroundColor = '#000000';
-    document.getElementById('footer').style.backgroundColor = '#000000';
+    document.getElementById('body_dark').style.backgroundColor = 'white';    
+
 }

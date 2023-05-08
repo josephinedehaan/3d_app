@@ -1,0 +1,473 @@
+
+@font-face {
+    font-family: cocaColaFont;
+    src: url(../assets/fonts/loki_cola/LOKICOLA.TTF)
+}
+
+#body_dark {
+      background-color: white;
+}
+
+.row {
+      max-width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+
+}
+
+.main_contents {
+      margin-top: 70px;
+      margin-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+}
+
+#img_one {
+      background-image: url(../assets/images/main_3d_576.png);
+}
+
+#img_two {
+      background-image: url(../assets/images/main_2_576.png);
+
+}
+
+.carousel_image{
+      margin-top: 0;
+      height: 864px;
+      width: 100%;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.main_text {
+      margin: 5%;
+      width: 90%;
+      display: block;
+      padding: 10px;
+      padding-top: 5px;
+      max-width: 68%;
+      color: rgb(255, 255, 255);
+}
+
+
+#main_text h2 {
+      font-size: 22px;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      font-weight: 700;
+}
+
+#main_text h3{
+      font-size: 15px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+}
+
+#our_brands_header, #title_3d_coke {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-weight: 700;
+      text-align: center;
+}
+
+p {
+      font-family: proxima-nova, sans-serif;;
+      color: rgb(76, 76, 76);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+      font-family: proxima-nova, sans-serif;
+}
+
+
+.btn-outline-primary {
+      color: #000000;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-color: #000000;
+}
+
+.btn-outline-primary:hover {
+      background-color: red;
+      border: 0px;
+}
+
+.btn-secondary {
+      background-color: red;
+      border-radius: 15px;
+      border-width: 1px;
+      border-color: red;
+
+}
+
+.btn-secondary:hover {
+      background-color: rgb(255, 255, 255);
+      border-color: #ff0000;
+      color: red;
+      border-width: 1px;
+      border-radius: 15px;
+}
+
+.card.borderless {
+      border-width: 0px;
+}
+
+
+.card {
+      border-width: 1px;
+      margin-top: 0px;
+      padding-top: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      /* margin-bottom: 10px; */
+      /* background-color: rgb(255, 255, 255); */
+      font-size: 13px;
+      text-align: center;
+  } 
+
+.card.description {
+      border-top: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      margin-bottom: 10px;
+}
+
+.card.gallery {
+      margin-bottom: 10px;
+      margin-left: 10px;
+      /* margin-right: 10px; */
+}
+
+.card-title.bigger {
+      font-size: 16px;
+}
+
+.card.about {
+      text-align: left;
+      color: rgb(51, 50, 50);
+}
+
+.home_card_img {
+      padding-left: 40px;
+      padding-right: 40px;
+}
+
+.image_gallery {
+      columns: 6;
+      display: inline-flex;
+}
+
+.img-thumbnail {
+      border: 0px;
+}
+
+
+
+#viewer_3d {
+      margin-top: 0px;
+      border-width: 0px;
+
+}
+
+.prod_description {
+      line-height: 25px;
+}
+
+
+.x3dom-canvas {
+      cursor: grab;
+      height: 400px;
+      width: 500px;
+      background-color: #ffffff;
+}
+
+
+.x3dom-canvas-mousedown {
+      cursor: grabbing;
+}
+
+
+.logo {
+      margin-top: 3px;
+}
+
+.logo h1{
+      font-family: cocaColaFont;
+      font-size: 31px;
+      margin: 0;
+      margin-top: -10px;
+      margin-bottom: -15px;
+      float: left;
+      padding-top: 0px;
+      padding-left: 0px;
+      padding-right: 3px;
+
+}
+
+.logo h2{
+      font-family: cocaColaFont;
+      font-size: 31px;
+      margin-top: -6px;
+      margin-bottom: -15px;
+      padding-top: 0px;
+      padding-left: 0px;
+      padding-right: 3px;
+      float: left;
+}
+
+.logo h3 {
+      font-size: 22px;
+      margin-top: -4px;
+      margin-bottom: -5;
+      padding-top: 0px;
+      padding-left: 0px;
+}
+
+.logo p {
+      font-size: 9px;
+      margin-top: -5px;
+      margin-bottom: -30px;
+      margin-left: -0px;
+      padding-top: 0px;
+      padding-left: -3px;
+      color: rgb(255, 255, 255);
+}
+
+
+#navbar_coca_cola {
+      background-color: #000000;
+      min-height: 70px;
+}
+
+#navbar_coca_cola .navbar-brand {
+      color: rgb(255, 255, 255);
+}
+
+#navbar_coca_cola .navbar-brand:hover, .nav-link.active:hover {
+      color: rgb(255, 0, 0);
+}
+
+
+#navbar_coca_cola .navbar-nav > li > a {
+      color: white;
+}
+
+#navbar_coca_cola .navbar-nav > li > a:hover{
+      color: rgb(255, 0, 0);
+}
+
+#navbar_coca_cola .navbar-nav .nav-item {
+      margin-top: 0px;
+}
+
+
+#navbar_coca_cola .navbar-toggler {
+      border-color: white;
+}
+
+.nav-link {
+      font-family: proxima-nova, sans-serif;
+}
+
+.dropdown-menu {
+      text-align: -webkit-left;
+      background-color: #000000;
+}
+
+.dropdown-menu .dropdown-item {
+      color: #ffffff;
+      font-family: proxima-nova, sans-serif;
+}
+
+.dropdown-menu .dropdown-item:hover {
+      color: #ff0000;
+      background-color: #000000;
+}
+
+
+.footer {
+      background-color: #000000;
+      height: 50px;
+      position:static;
+      bottom: 0px;
+      width: 100%;
+}
+.navbar-text > a {
+      font-size: 10px;
+}
+.navbar-text > p {
+      color: rgb(238, 244, 238);
+      font-size: 14px;
+      text-decoration: none;
+}
+.copyright {
+      padding-top: 8px;
+}
+.social {
+      padding-top: 0px;
+}
+
+#aboutPage {
+      max-width: 95%;
+}
+
+
+
+
+/* X-Small devices (portrait phones, less than 576px)
+      No media query for `xs` since this is the default in Bootstrap */
+      
+      
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+
+      #img_one {
+            background-image: url(../assets/images/main_3d_768.png);
+      }
+      #img_two {
+            background-image: url(../assets/images/main_2_768.png);
+      }
+ 
+      .carousel_image {
+            height: 320px;
+            margin-top: 7%;
+      }
+      .main_contents {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+      }
+      .image_gallery {
+            columns: 6;
+      }
+      #title_3d_coke {
+            padding-top: 80px;
+      }
+
+      .x3dom-canvas {
+            width: 350px;
+      }
+
+      #aboutPage {
+            padding-top: 80px;
+      }
+ }
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+      #img_one {
+            background-image: url(../assets/images/main_3d_992.png);
+      }
+      #img_two {
+            background-image: url(../assets/images/main_2_992.png);
+      }
+      .carousel_image {
+            height: 350px;
+            margin-top: 8%;
+      }
+
+      #title_3d_coke {
+            padding-top: 80px;
+
+      }
+
+      .x3dom-canvas {
+            width: 450px;
+      }
+      
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+      #img_one {
+            background-image: url(../assets/images/main_3d_1200.png);
+      }
+      #img_two {
+            background-image: url(../assets/images/main_2_1200.png);
+      }
+
+      .carousel_image {
+            height: 500px;
+            margin-top: 6%;
+      }
+
+      #main_text {
+            padding-top: 60px;
+            max-width: 50%;
+
+      }
+      #main_text h2 {
+            font-size: 45px;
+            line-height: 60px;
+
+      }
+      
+      #main_text h3{
+            font-size: 20px;
+            max-width: 75%;
+      }
+
+      #title_3d_coke {
+            padding-top: 100px;
+      }
+
+      .x3dom-canvas {
+            width: 550px;
+      }
+
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+      #img_one {
+            background-image: url(../assets/images/main_3d_1400.png);
+      }
+      #img_two {
+            background-image: url(../assets/images/main_2_1400.png);
+      }
+
+      .carousel_image {
+            height: 600px;
+            margin-top: 4%;
+      }
+      .x3dom-canvas {
+            width: 750px;
+      }
+ }
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+      #img_one {
+            background-image: url(../assets/images/main_3d.png);
+      }
+      #img_two {
+            background-image: url(../assets/images/main_2.png);
+      }
+      .carousel_image {
+            height: 820px;
+            margin-top: 3%;
+      }
+      #main_text {
+            padding-top: 100px;
+            max-width: 50%;
+
+      }
+      #main_text h2 {
+            font-size: 55px;
+            line-height: 60px;
+
+      }
+      
+      #main_text h3{
+            font-size: 25px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            max-width: 75%;
+      }
+      .x3dom-canvas {
+            width: 900px;
+      }
+      
+}
+
