@@ -16,7 +16,6 @@ foreach ($files as $file) {
 // Convert the image files array to JSON format
 $json = json_encode($imageFiles, JSON_UNESCAPED_SLASHES);
 
-
 // Set the Content-Type header to indicate that the response is in JSON format
 header('Content-Type: application/json');
 
