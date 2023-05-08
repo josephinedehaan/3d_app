@@ -53,6 +53,8 @@ function grabModelViews() {
 					modelOneLabel: page.model_one_label,
 					modelTwoLabel: page.model_two_label,
 					galleryDir: page.gallery_dir,
+					buyURL: page.buy_url,
+					buttonColour: page.button_colour
 				};
 			});
 			return modelViews;
@@ -66,7 +68,9 @@ function switchModelView(view) {
 	document.getElementById('modelDescription').innerHTML = modelViews[view].description;
 	document.getElementById('modelOneLabel').innerHTML = modelViews[view].modelOneLabel;
 	document.getElementById('modelTwoLabel').innerHTML = modelViews[view].modelTwoLabel;
-	//switchGallery(modelViews[view].galleryDir);
+	document.getElementById('buyURL').href = modelViews[view].buyURL;
+	switchGallery(modelViews[view].galleryDir);
+	switchBtnColor(modelViews[view].buttonColour);
 
 	currentModelView = view;
 	showModelOne();
@@ -79,8 +83,6 @@ function switchModelView(view) {
 // Swaps the model url
 function swapModel(modelFile) {
 	document.getElementById('modelViewer').innerHTML = '<inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/3d_models/' + modelFile + '"></inline>'
-	/*var x3dElement = document.getElementById("modelViewer");
-	x3dElement.getElementsByTagName("inline")[0].setAttribute("url", "assets/3d_models/" + modelFile);*/
 }
 
 // Set of functions to swap between can/bottle
@@ -92,3 +94,26 @@ function showModelTwo() {
 }
 
 grabModelViews();
+
+function switchGallery(gallery) {
+	const galleryDiv = document.getElementById('gallery');
+	galleryDiv.innerHTML = '';
+	var htmlCode = "";
+	fetch('scripts/php/gallery_json.php?gallery=' + gallery)
+		.then(response => response.json())
+		.then(data => {
+			data.forEach(image => {
+				htmlCode += '<a href="assets/images/' + image +'" data-fancybox="gallery">';
+                htmlCode += '<img class="card-img-top gallery img-thumbnail" src="assets/images/' + image + '"/>';
+                htmlCode += '</a>';
+				document.getElementById('image_gallery').innerHTML = htmlCode;
+			});
+		})
+		.catch(error => console.error(error));
+}
+
+function switchBtnColor(bgColor) {
+	const style = document.createElement('style');
+	style.innerHTML = '.btn-outline-primary:hover { color: white; background-color: '+ bgColor + '; border-color:'+bgColor+'}';
+	document.head.appendChild(style);
+}

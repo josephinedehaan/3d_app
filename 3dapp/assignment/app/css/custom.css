@@ -87,23 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-outline-primary:hover {
       background-color: red;
-      border: 0px;
-}
-
-.btn-secondary {
-      background-color: red;
-      border-radius: 15px;
-      border-width: 1px;
       border-color: red;
-
-}
-
-.btn-secondary:hover {
-      background-color: rgb(255, 255, 255);
-      border-color: #ff0000;
-      color: red;
-      border-width: 1px;
-      border-radius: 15px;
 }
 
 .card.borderless {
@@ -132,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.card.gallery {
+.card#gallery {
       margin-bottom: 10px;
       margin-left: 10px;
       /* margin-right: 10px; */
@@ -152,13 +136,14 @@ h1, h2, h3, h4, h5, h6 {
       padding-right: 40px;
 }
 
-.image_gallery {
+#image_gallery {
       columns: 6;
       display: inline-flex;
 }
 
 .img-thumbnail {
       border: 0px;
+      max-height: 150px;
 }
 
 #viewer_3d {
