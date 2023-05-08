@@ -1,3 +1,5 @@
+cameraFront();
+
 var spinning = false;
 
 function spin()
@@ -12,13 +14,6 @@ function stopRotation()
 	document.getElementById('model__Timer').setAttribute('enabled', spinning.toString());
 }
 
-// This function is not working yet
-function changeSpeed(speed)
-{
-	document.getElementById('model__Timer').setAttribute('cycleInterval', speed);
-
-}
-
 function animateModel()
 {
     if(document.getElementById('model__Timer').getAttribute('enabled')!= 'true')
@@ -29,6 +24,7 @@ function animateModel()
 
 var currentmode = 0;
 
+// Toggles points to display polygon view
 function poly() {
     var e = document.getElementById('x3d_viewer');
 
@@ -45,6 +41,8 @@ function poly() {
     }
     currentmode = 0;
 }
+
+// Toggles points to display wireframe view
 
 function wireframe() {
     var e = document.getElementById('x3d_viewer');
@@ -63,6 +61,7 @@ function wireframe() {
     currentmode = 1;
 }
 
+// Toggles points to display vertex view
 function vertex() {
     var e = document.getElementById('x3d_viewer');
 
@@ -80,21 +79,19 @@ function vertex() {
     currentmode = 2;
 }
 
+// 
 function cameraFront()
 {
 	document.getElementById('model__View_cam_01').setAttribute('bind', 'true');
 }
-
 function cameraTop()
 {
 	document.getElementById('model__View_cam_02').setAttribute('bind', 'true');
 }
-
 function cameraBottom()
 {
 	document.getElementById('model__View_cam_03').setAttribute('bind', 'true');
 }
-
 function cameraBack()
 {
 	document.getElementById('model__View_cam_04').setAttribute('bind', 'true');

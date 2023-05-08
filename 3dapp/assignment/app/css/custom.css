@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: cocaColaFont;
     src: url(../assets/fonts/loki_cola/LOKICOLA.TTF)
@@ -50,7 +49,6 @@
       color: rgb(255, 255, 255);
 }
 
-
 #main_text h2 {
       font-size: 22px;
       margin-top: 0px;
@@ -76,11 +74,9 @@ p {
       color: rgb(76, 76, 76);
 }
 
-
 h1, h2, h3, h4, h5, h6 {
       font-family: proxima-nova, sans-serif;
 }
-
 
 .btn-outline-primary {
       color: #000000;
@@ -114,7 +110,6 @@ h1, h2, h3, h4, h5, h6 {
       border-width: 0px;
 }
 
-
 .card {
       border-width: 1px;
       margin-top: 0px;
@@ -133,6 +128,8 @@ h1, h2, h3, h4, h5, h6 {
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
       margin-bottom: 10px;
+      line-height: 30px;
+
 }
 
 .card.gallery {
@@ -164,18 +161,10 @@ h1, h2, h3, h4, h5, h6 {
       border: 0px;
 }
 
-
-
 #viewer_3d {
       margin-top: 0px;
       border-width: 0px;
-
 }
-
-.prod_description {
-      line-height: 25px;
-}
-
 
 .x3dom-canvas {
       cursor: grab;
@@ -184,11 +173,9 @@ h1, h2, h3, h4, h5, h6 {
       background-color: #ffffff;
 }
 
-
 .x3dom-canvas-mousedown {
       cursor: grabbing;
 }
-
 
 .logo {
       margin-top: 3px;
@@ -204,7 +191,6 @@ h1, h2, h3, h4, h5, h6 {
       padding-top: 0px;
       padding-left: 0px;
       padding-right: 3px;
-
 }
 
 .logo h2{
@@ -236,7 +222,6 @@ h1, h2, h3, h4, h5, h6 {
       color: rgb(255, 255, 255);
 }
 
-
 #navbar_coca_cola {
       background-color: #000000;
       min-height: 70px;
@@ -263,7 +248,6 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 0px;
 }
 
-
 #navbar_coca_cola .navbar-toggler {
       border-color: white;
 }
@@ -287,7 +271,6 @@ h1, h2, h3, h4, h5, h6 {
       background-color: #000000;
 }
 
-
 .footer {
       background-color: #000000;
       height: 50px;
@@ -304,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
       text-decoration: none;
 }
 .copyright {
-      padding-top: 8px;
+      padding-top: 0px;
 }
 .social {
       padding-top: 0px;
@@ -314,13 +297,6 @@ h1, h2, h3, h4, h5, h6 {
       max-width: 95%;
 }
 
-
-
-
-/* X-Small devices (portrait phones, less than 576px)
-      No media query for `xs` since this is the default in Bootstrap */
-      
-      
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { 
 
@@ -378,7 +354,6 @@ h1, h2, h3, h4, h5, h6 {
       .x3dom-canvas {
             width: 450px;
       }
-      
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -417,7 +392,6 @@ h1, h2, h3, h4, h5, h6 {
       .x3dom-canvas {
             width: 550px;
       }
-
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
@@ -458,7 +432,6 @@ h1, h2, h3, h4, h5, h6 {
             line-height: 60px;
 
       }
-      
       #main_text h3{
             font-size: 25px;
             margin-top: 5px;
@@ -468,6 +441,4 @@ h1, h2, h3, h4, h5, h6 {
       .x3dom-canvas {
             width: 900px;
       }
-      
 }
-

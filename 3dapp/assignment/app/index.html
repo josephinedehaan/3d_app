@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -17,14 +15,9 @@
     <link rel="stylesheet" href="css/custom.css" src="https://www.x3dom.org/download/x3dom.css">
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-
-
     <title>Coca Cola Journey</title>
 
-
-
 </head>
-
 
 <body id="body_dark">
 <!--NAVBAR-->
@@ -58,9 +51,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle dropdown-menu-end" href="#" id="navbardrop" data-toggle="dropdown">Drinks</a>
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" id="navCoke" href="#">Coca Cola</a>
-                            <a class="dropdown-item" id="navSprite" href="#">Sprite</a>
-                            <a class="dropdown-item" id="navPepper" href="#">Dr Pepper</a>
+                            <a class="dropdown-item" href="#" onClick="switchModelView('cola');">Coca Cola</a>
+                            <a class="dropdown-item" href="#" onClick="switchModelView('sprite');">Sprite</a>
+                            <a class="dropdown-item" href="#" onClick="switchModelView('pepper');">Dr Pepper</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -70,9 +63,6 @@
             </div>
         </div>       
     </nav>
-
-
-
 
 <!-- PAGE 1: Landing page-->
     <div id="home" class="container-fluid main_contents">
@@ -119,7 +109,7 @@
                     <div class="card-body">
                         <div class="card-title" id="title_cokecard"></div>
                         <div class="card-text" id="description_cokecard"></div>
-                        <a id="navCokeButton" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
+                        <a onClick="switchModelView('cola');" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
                     </div>
                 </div>
             </div>
@@ -133,7 +123,7 @@
                     <div class="card-body">
                         <div class="card-title" id="title_spritecard"></div>
                         <div class="card-text" id="description_spritecard"></div>
-                        <a id="navSpriteButton" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
+                        <a onClick="switchModelView('sprite');" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
                     </div>
                 </div>
             </div>
@@ -147,15 +137,13 @@
                     <div class="card-body">
                         <div class="card-title" id="title_peppercard"></div>
                         <div class="card-text" id="description_peppercard"></div>
-                        <a id="navPepperButton" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
+                        <a onClick="switchModelView('pepper');" href="#" class="btn btn-sm btn-outline-primary">Find out more...</a>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-
-
 
 <!--PAGE 2: Product Page contents-->
     <div id="modelDiv" class="container-fluid main_contents" style="display:none;">
@@ -169,16 +157,14 @@
                         <div id="modelStyle">
                             <x3d id="x3d_viewer">
                                 <scene>
-                                    <transform id="modelViewer">
-                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/3d_models/coke_can.x3d"></inline>
-                                    </transform>
+                                    <transform id="modelViewer"></transform>
                                 </scene>
                             </x3d>
                         </div>
                     </div>
                     <!--Image gallery-->
                     <div class="card gallery">
-                        <div class="image_gallery" id="gallery_coke"></div>
+                        <div class="image_gallery"></div>
                     </div>
                 </div>
             </div>
@@ -189,19 +175,18 @@
                 <div>
                     <ul class = "nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" id="modelOneLabel" href="#"></a>
+                            <a class="nav-link active" id="modelOneLabel" href="#" onClick="showModelOne();" ></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="modelTwoLabel" href="#"></a>
+                            <a class="nav-link active" id="modelTwoLabel" href="#" onClick="showModelTwo();"></a>
                         </li>
                     </ul>
 
                 </div>
                 <!-- Model Description -->
-                <div class="card description" id="modelDescription">
+                <div class="card description">
                     <div class="card-body">
-                        <!-- <div class="card-title" id="title_coke"></div> -->
-                        <div id="description_coke"></div>
+                        <div id="modelDescription"></div>
                         <a href="#" class="btn btn-secondary">Buy</a>
                     </div>
                 </div>
@@ -212,8 +197,6 @@
                         <h6>Animation options
                             <div class="btn-group btn-group-toggle">
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="spin();">Play</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(1);">Fast</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeSpeed(10);">Slow</a>
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="stopRotation();">Pause</a>
                             </div>                            
                         </h6>
@@ -232,12 +215,6 @@
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="vertex();">Vertex</a>
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="wireframe();">Wire</a>
                                 <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="poly();">Default</a>
-                            </div>
-                        </h6>
-                        <h6>Dark mode
-                            <div class="btn-group btn-group-toggle">
-                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeLook();">On</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary btn-responsive camera-font" onClick="changeBack();">Off</a>
                             </div>
                         </h6>
                     </div>
@@ -282,22 +259,13 @@
         </div>
         
     </div>
-
-
-
-
-    
-    
-
-
-
     <br>
 
 <!-- FOOTER -->
     <nav class="navbar navbar-expand-sm footer">
         <div class="container-fluid">
             <div class="navbar-text float-left copyright">
-                <p><span class="align-baseline">2023 Web 3D Applications</span></p>
+                <p>2023 Web 3D Applications</p>
             </div>
             <div class="navbar-text float-right social">
                 <a href="https://www.facebook.com/Coca-Cola/"><i class="fa-brands fa-facebook" style="font-size: 20px;color:rgb(255, 255, 255); padding:3px"></i></a>
