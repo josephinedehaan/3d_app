@@ -31,12 +31,13 @@ $(document).ready(function () {
 
 });
 
-// GLOBAL VARIABLE TO HOLD VIEWS FOR MODEL PAGE
+// Global variables to hold json data
 let modelViews = {};
 let currentModelView = '';
 let cardData = {};
+let slideData = {};
 
-// FUNCTION THAT GRABS MODELS VIEWS 
+// Function to grab model view
 function grabModelViews() {
 	return fetch('scripts/php/model_json.php')
 		.then(response => response.json())
@@ -59,7 +60,7 @@ function grabModelViews() {
 		.catch(error => console.error(error));
 }
 
-// FUNCTION THAT GRABS HOME PAGE CARDS DATA 
+// Function to grab home page cards data 
 function grabCardData() {
 	return fetch('scripts/php/card_json.php')
 		.then(response => response.json())
@@ -77,7 +78,33 @@ function grabCardData() {
 		.catch(error => console.error(error));
 }
 
-// Populate cards
+// Function to grab carousel slide text data 
+function grabCarouselSlideData() {
+	return fetch('scripts/php/carousel_json.php')
+		.then(response => response.json())
+		.then(data => {
+			data.forEach(slide => {
+				slideData[slide.slide_name] = {
+					title: slide.title,
+					subtitle: slide.subtitle,
+				};
+			});
+			return slideData;
+		})
+		.catch(error => console.error(error));
+}
+// Populate carousel
+function populateCarousel() {
+	// Slide 1
+	document.getElementById('slideOneTitle').innerHTML = slideData['slide_one'].title;
+	document.getElementById('slideOneSubtitle').innerHTML = slideData['slide_one'].subtitle;
+	// Slide 2
+	document.getElementById('slideTwoTitle').innerHTML = slideData['slide_two'].title;
+	document.getElementById('slideTwoSubtitle').innerHTML = slideData['slide_two'].subtitle;
+}
+
+
+// Populate cards ****(TO DO: FIX THE TAGS SO THAT THEY're IN THE HTML)******
 function populateCards() {
 	document.getElementById('cokeCardTitle').innerHTML = '<h3>' + cardData['cola'].title + '</h3';
 	document.getElementById('cokeCardDescription').innerHTML = '<p>' + cardData['cola'].description + '</p>';
@@ -124,8 +151,7 @@ function showModelTwo() {
 	swapModel(modelViews[currentModelView].modelTwo);
 }
 
-
-
+// Function to swap between the three image galleries
 function switchGallery(gallery) {
 	const galleryDiv = document.getElementById('gallery');
 	galleryDiv.innerHTML = '';
@@ -143,15 +169,49 @@ function switchGallery(gallery) {
 		.catch(error => console.error(error));
 }
 
+// Function to change button colour on each model page
 function switchBtnColor(bgColor) {
 	const style = document.createElement('style');
 	style.innerHTML = '.btn-outline-primary:hover { color: white; background-color: '+ bgColor + '; border-color:'+bgColor+'}';
 	document.head.appendChild(style);
 }
 
+// Adds/removes attributes
+function toggleNavbarCollapse() {
+	var screenWidth = window.innerWidth;
+	var navbarElements = document.querySelectorAll('.collapsible_nav_item');
+  
+	if (screenWidth < 576) {
+	  navbarElements.forEach(function(element) {
+		element.setAttribute('data-toggle', 'collapse');
+		element.setAttribute('data-target', '.navbar-collapse');
+	  });
+	} else {
+	  navbarElements.forEach(function(element) {
+		element.removeAttribute('data-toggle');
+		element.removeAttribute('data-target');
+	  });
+	}
+  }
+
+
+// init code 
+
+window.addEventListener('resize', toggleNavbarCollapse);
+toggleNavbarCollapse()
+
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+
+Fancybox.bind("[data-fancybox]", {});
 
 grabModelViews();
 
 grabCardData().then(() => {
 	populateCards();
+});
+
+grabCarouselSlideData().then(() => {
+	populateCarousel();
 });

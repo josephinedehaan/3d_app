@@ -27,11 +27,11 @@ body {
 }
 
 #img_one {
-      background-image: url(../assets/images/main_3d_576.png);
+      background-image: url(../assets/images/carousel_images/slide_1_default.png);
 }
 
 #img_two {
-      background-image: url(../assets/images/main_2_576.png);
+      background-image: url(../assets/images/carousel_images/slide_2_default.png);
 
 }
 
@@ -132,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card.about {
+      margin-top: 10px;
       text-align: left;
       color: rgb(51, 50, 50);
 }
@@ -255,10 +256,6 @@ h1, h2, h3, h4, h5, h6 {
       --bs-navbar-toggler-icon-bg: url(
   "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='red' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.navbar-toggler-icon:active {
-      transform: rotate(90deg);
-
-}
 
 .nav-link {
       font-family: proxima-nova, sans-serif;
@@ -311,10 +308,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 576px) { 
 
       #img_one {
-            background-image: url(../assets/images/main_3d_768.png);
+            background-image: url(../assets/images/carousel_images/slide_1_small.png);
       }
       #img_two {
-            background-image: url(../assets/images/main_2_768.png);
+            background-image: url(../assets/images/carousel_images/slide_2_small.png);
       }
  
       .carousel_image {
@@ -346,10 +343,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
 
       #img_one {
-            background-image: url(../assets/images/main_3d_992.png);
+            background-image: url(../assets/images/carousel_images/slide_1_medium.png);
       }
       #img_two {
-            background-image: url(../assets/images/main_2_992.png);
+            background-image: url(../assets/images/carousel_images/slide_2_medium.png);
       }
       .carousel_image {
             height: 350px;
@@ -368,10 +365,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
       #img_one {
-            background-image: url(../assets/images/main_3d_1200.png);
+            background-image: url(../assets/images/carousel_images/slide_1_large.png);
       }
       #img_two {
-            background-image: url(../assets/images/main_2_1200.png);
+            background-image: url(../assets/images/carousel_images/slide_2_large.png);
       }
 
       .carousel_image {
@@ -406,10 +403,10 @@ h1, h2, h3, h4, h5, h6 {
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
       #img_one {
-            background-image: url(../assets/images/main_3d_1400.png);
+            background-image: url(../assets/images/carousel_images/slide_1_xlarge.png);
       }
       #img_two {
-            background-image: url(../assets/images/main_2_1400.png);
+            background-image: url(../assets/images/carousel_images/slide_2_xlarge.png);
       }
 
       .carousel_image {
@@ -423,10 +420,10 @@ h1, h2, h3, h4, h5, h6 {
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
       #img_one {
-            background-image: url(../assets/images/main_3d.png);
+            background-image: url(../assets/images/carousel_images/slide_1_xxlarge.png);
       }
       #img_two {
-            background-image: url(../assets/images/main_2.png);
+            background-image: url(../assets/images/carousel_images/slide_2_xxlarge.png);
       }
       .carousel_image {
             height: 820px;

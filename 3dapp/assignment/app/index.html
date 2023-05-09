@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/mzk7jvx.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -16,10 +16,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <title>Coca Cola Journey</title>
-
 </head>
 
-<body id="body_dark">
+<body>
 <!--NAVBAR-->
     <nav class="navbar navbar-expand-sm fixed-top" id="navbar_coca_cola">
         <div class="container-fluid" id="fixed_navbar">
@@ -39,10 +38,10 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">   
+            <div class="collapse navbar-collapse">   
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" id="navHomeRight" href="#">Home</a>
+                        <a class="nav-link collapsible_nav_item" id="navHomeRight" href="#">Home</a>
                     </li>            
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" 
@@ -51,13 +50,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle dropdown-menu-end" href="#" id="navbardrop" data-toggle="dropdown">Drinks</a>
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="#" onClick="switchModelView('cola');">Coca Cola</a>
-                            <a class="dropdown-item" href="#" onClick="switchModelView('sprite');">Sprite</a>
-                            <a class="dropdown-item" href="#" onClick="switchModelView('pepper');">Dr Pepper</a>
+                            <a class="dropdown-item collapsible_nav_item" href="#" onClick="switchModelView('cola');" >Coca Cola</a>
+                            <a class="dropdown-item collapsible_nav_item" href="#" onClick="switchModelView('sprite');">Sprite</a>
+                            <a class="dropdown-item collapsible_nav_item" href="#" onClick="switchModelView('pepper');">Dr Pepper</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="navAbout" href="#">About</a>
+                        <a class="nav-link collapsible_nav_item" id="navAbout" href="#">About</a>
                     </li>
                 </ul>
             </div>
@@ -67,21 +66,21 @@
 <!-- PAGE 1: Landing page-->
     <div id="home" class="container-fluid main_contents">
         <!--CAROUSEL-->
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel_image" id="img_one">
                         <div class="col-xs-12 col-sm-4 main_text">
-                            <div id="title_home"></div>
-                            <div id="subtitle_home"></div>
+                            <div><h1 id="slideOneTitle"></h1></div>
+                            <div><h3 id="slideOneSubtitle"></h3></div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel_image" id="img_two">
-                        <div class="col-xs-12 col-sm-4 main_text" id="slide_two">
-                            <div id="title_2_home"></div>
-                            <div id="subtitle_2_home"></div>
+                        <div class="col-xs-12 col-sm-4 main_text">
+                            <div><h1 id="slideTwoTitle"></h1></div>
+                            <div><h3 id="slideTwoSubtitle"></h3></div>
                         </div>
                     </div>
                 </div>
