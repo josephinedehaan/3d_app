@@ -1,5 +1,3 @@
-cameraFront();
-
 var spinning = false;
 
 function spin()

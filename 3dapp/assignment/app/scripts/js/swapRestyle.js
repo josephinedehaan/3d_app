@@ -77,27 +77,21 @@ function grabCardData() {
 		.catch(error => console.error(error));
 }
 
+// Populate cards
 function populateCards() {
 	document.getElementById('cokeCardTitle').innerHTML = '<h3>' + cardData['cola'].title + '</h3';
 	document.getElementById('cokeCardDescription').innerHTML = '<p>' + cardData['cola'].description + '</p>';
 	document.getElementById('cokeCardImage').src = "assets/images/cards/" + cardData['cola'].image;
 	document.getElementById('cokeCardLink').href = "javascript:switchModelView('" + cardData['cola'].link + "')";
-
 	document.getElementById('spriteCardTitle').innerHTML = '<h3>' + cardData['sprite'].title + '</h3';
 	document.getElementById('spriteCardDescription').innerHTML = '<p>' + cardData['sprite'].description + '</p>';
 	document.getElementById('spriteCardImage').src = "assets/images/cards/" + cardData['sprite'].image;
 	document.getElementById('spriteCardLink').href = "javascript:switchModelView('" + cardData['sprite'].link + "')";
-
 	document.getElementById('pepperCardTitle').innerHTML = '<h3>' + cardData['pepper'].title + '</h3';
 	document.getElementById('pepperCardDescription').innerHTML = '<p>' + cardData['pepper'].description + '</p>';
 	document.getElementById('pepperCardImage').src = "assets/images/cards/" + cardData['pepper'].image;
 	document.getElementById('pepperCardLink').href = "javascript:switchModelView('" + cardData['pepper'].link + "')";
-
-
 }
-
-
-
 
 // Switch model page view
 function switchModelView(view) {
