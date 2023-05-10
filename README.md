@@ -4,7 +4,7 @@ This website was created as part of the submission for the assessment of the 3D 
 
 **Architecture:**
 
-SQLite -> PHP -> JSON -> Javascript pipeline 
+SQLite => PHP => JSON => Javascript pipeline 
 * On the server side, data for page content (cards, 3d model pages, carousel) is stored in a SQLite database. This SQLite database is accessed via PHP, the contents of each table are marshalled into JSON.
 * Client side, JavaScript is used to populate the HTML elements with data expressed in the JSON responses. 
 
@@ -30,7 +30,7 @@ About Page
 
 [GitHub Repo](https://github.com/josephinedehaan/3d_app/tree/master/3dapp/assignment/app)
 
-[3D Models](https://github.com/josephinedehaan/3d_app/tree/master/3dapp/assignment/3d_models)
+[3D Models](https://github.com/josephinedehaan/3d_app/tree/master/3dapp/assignment/app/assets/3d_models)
 
   
   
