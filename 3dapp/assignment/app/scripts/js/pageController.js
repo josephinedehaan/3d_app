@@ -77,6 +77,21 @@ function showAbout() {
 	$('#aboutPage').show();
 }
 
+// Load the Markdown file using fetch()
+function populateAboutPage() {
+	fetch('assets/markdown/about.md')
+	.then(response => response.text())
+	.then(markdown => {
+		// Convert the Markdown to HTML using Showdown
+		const converter = new showdown.Converter();
+		const html = converter.makeHtml(markdown);
+
+		// Display the HTML on the page
+		document.getElementById('markdown-content').innerHTML = html;
+	})
+	.catch(error => console.error(error));
+}
+
 // Populate carousel
 function populateCarousel() {
 	// Slide 1
@@ -203,6 +218,9 @@ function spaInit() {
 	grabCarouselSlideData().then(() => {
 		populateCarousel();
 	});
+
+	// Populate about page
+	populateAboutPage();
 
 }
 
