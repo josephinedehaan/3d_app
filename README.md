@@ -1,7 +1,5 @@
 ## Coca-Cola Journey 3D Web App
 
-***
-
 This website was created as part of the submission for the assessment of the 3D Web Application module at the University of Sussex.
 
 **Architecture:**
@@ -27,8 +25,6 @@ About Page
 
 ## Links
 
-***
-
 
 [Coca-Cola Journey](https://users.sussex.ac.uk/~jd623/3dapp/assignment/app/index.html)
 
@@ -40,8 +36,6 @@ About Page
   
 ## Points of deeper understanding
 
-***
-
 1. Six models were created and exported using Maxon Cinema 4D.
 
 2. Two renders per model (12 renders total) were generated using the Cinema 4D Standard render engine. Three compositions were created in Adobe Photoshop using the renders.
@@ -52,8 +46,6 @@ About Page
 
 
 ## References
-
-***
 
 modelInteractions.js is heavily based on Martin White's modelInteraction.js.
 
