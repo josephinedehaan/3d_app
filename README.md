@@ -14,7 +14,7 @@ Image Gallery
 * On the client side the lightbox image gallery is populated with the contents of this JSON array.
 
 About Page
-* The about page uses the Showdown JavaScript libraryto parse a Markdown file stored in assets/markdown.
+* The about page uses the Showdown JavaScript library to parse a Markdown file stored in assets/markdown.
 * HTML code is generated from the markdown and inserted into the about page, allowing easy editing of the text-heavy page.
 
 
