@@ -24,60 +24,44 @@ var currentmode = 0;
 
 // Toggles points to display polygon view
 function poly() {
-    var e = document.getElementById('x3d_viewer');
-
-    if (currentmode == 0) { }
-    else if (currentmode == 1) { //each toggles 4 times
-        for (var i = 0; i<4; i++){
-        e.runtime.togglePoints(true);
-        }
-    }
-    else if (currentmode == 2) { //each toggles 2 times
-        for (var i = 0; i<2; i++){
-        e.runtime.togglePoints(true);
-        }
-    }
-    currentmode = 0;
+  setView(0);
 }
 
 // Toggles points to display wireframe view
-
 function wireframe() {
-    var e = document.getElementById('x3d_viewer');
-
-    if (currentmode == 1) { }
-    else if (currentmode == 2) { //each toggles 4 times
-        for (var i = 0; i<4; i++){
-        e.runtime.togglePoints(true);
-        }
-    }
-    else if (currentmode == 0) { //each toggles 2 times
-        for (var i = 0; i<2; i++){
-        e.runtime.togglePoints(true);
-        }
-    }
-    currentmode = 1;
+  setView(1);
 }
 
 // Toggles points to display vertex view
 function vertex() {
-    var e = document.getElementById('x3d_viewer');
-
-    if (currentmode == 2) { }
-    else if (currentmode == 0) { 
-        for (var i = 0; i<4; i++){
-        e.runtime.togglePoints(true);
-        }
-    }
-    else if (currentmode == 1) { 
-        for (var i = 0; i<2; i++){
-        e.runtime.togglePoints(true);
-        }
-    }
-    currentmode = 2;
+  setView(2);
 }
 
-// 
+// Helper function to set the view based on the mode
+function setView(mode) {
+  var e = document.getElementById('x3d_viewer');
+  var toggleCount;
+
+  if (currentmode === mode) {
+    return;
+  }
+
+  if ((currentmode === 0 && mode === 1) || (currentmode === 1 && mode === 0)) {
+    toggleCount = 4;
+  } else if ((currentmode === 0 && mode === 2) || (currentmode === 2 && mode === 0)) {
+    toggleCount = 2;
+  } else if ((currentmode === 1 && mode === 2) || (currentmode === 2 && mode === 1)) {
+    toggleCount = 4;
+  }
+
+  for (var i = 0; i < toggleCount; i++) {
+    e.runtime.togglePoints(true);
+  }
+
+  currentmode = mode;
+}
+
+// Sets the active camera for the model view
 function cameraFront()
 {
 	document.getElementById('model__View_cam_01').setAttribute('bind', 'true');
