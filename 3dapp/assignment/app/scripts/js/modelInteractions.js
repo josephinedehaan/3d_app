@@ -1,17 +1,42 @@
 var spinning = false;
+var currentmode = 0;
 
+// Sets the active cameras for the model view
+function cameraFront()
+{
+	document.getElementById('model__View_cam_04').setAttribute('bind', 'true');
+}
+function cameraTop()
+{
+	document.getElementById('model__View_cam_02').setAttribute('bind', 'true');
+}
+function cameraBottom()
+{
+	document.getElementById('model__View_cam_03').setAttribute('bind', 'true');
+}
+function cameraBack()
+{
+	document.getElementById('model__View_cam_01').setAttribute('bind', 'true');
+}
+
+
+// Starts rotation animation
 function spin()
 {
 	spinning = !spinning;
 	document.getElementById('model__Timer').setAttribute('enabled', spinning.toString());
 }
 
+
+// Stops rotation animation
 function stopRotation()
 {
 	spinning = false;
 	document.getElementById('model__Timer').setAttribute('enabled', spinning.toString());
 }
 
+
+// Detects whether model is spinning and stops/starts it accordingly
 function animateModel()
 {
     if(document.getElementById('model__Timer').getAttribute('enabled')!= 'true')
@@ -20,22 +45,20 @@ function animateModel()
         document.getElementById('model__Timer').setAttribute('enabled', 'false');
 }
 
-var currentmode = 0;
 
 // Toggles points to display polygon view
 function poly() {
   setView(0);
 }
-
 // Toggles points to display wireframe view
 function wireframe() {
   setView(1);
 }
-
 // Toggles points to display vertex view
 function vertex() {
   setView(2);
 }
+
 
 // Helper function to set the view based on the mode
 function setView(mode) {
@@ -59,22 +82,4 @@ function setView(mode) {
   }
 
   currentmode = mode;
-}
-
-// Sets the active camera for the model view
-function cameraFront()
-{
-	document.getElementById('model__View_cam_01').setAttribute('bind', 'true');
-}
-function cameraTop()
-{
-	document.getElementById('model__View_cam_02').setAttribute('bind', 'true');
-}
-function cameraBottom()
-{
-	document.getElementById('model__View_cam_03').setAttribute('bind', 'true');
-}
-function cameraBack()
-{
-	document.getElementById('model__View_cam_04').setAttribute('bind', 'true');
 }
