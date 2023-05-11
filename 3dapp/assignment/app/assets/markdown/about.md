@@ -7,13 +7,13 @@ This website was created as part of the submission for the assessment of the 3D 
 **Architecture:**
 
 SQLite -> PHP -> JSON -> Javascript pipeline 
-* On the server side, data for page content (cards, 3d model pages, carousel) is stored in a SQLite database. This SQLite database is accessed via PHP, the contents of each table are marshalled into JSON.
+* On the server side, data for page content (cards, 3d model pages, carousel) is stored in an SQLite database. This SQLite database is accessed via PHP, the contents of each table are marshalled into JSON.
 * Client side, JavaScript is used to populate the HTML elements with data expressed in the JSON responses. 
 
 Image Gallery
 * PHP is used to parse subdirectories of assets based on a GET request (e.g, gallery_json.php?gallery=coke).
 * The directory listing is marshalled into a JSON array, with non image files ignored.
-* On the client side the lightbox image gallery is populated with the contents of this JSON array.
+* On the client side, the lightbox image gallery is populated with the contents of this JSON array.
 
 About Page
 * The about page uses the Showdown JavaScript library to parse a Markdown file stored in assets/markdown.
